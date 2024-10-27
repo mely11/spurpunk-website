@@ -1,23 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Page1 from './pages/Page1'; // Importing Page1 component
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Page1 />  {/* Rendering Page1 */}
     </div>
   );
 }

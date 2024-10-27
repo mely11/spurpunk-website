@@ -1,0 +1,51 @@
+.page1 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Map */
+.bg-map {
+  position: absolute;
+  top: calc(609.5px - 1219px / 2);  /* Centered at (547, 609.5) */
+  left: calc(50% - 1120px / 2);     /* Center horizontally */
+  width: 1120px;
+  height: 1219px;
+}
+
+/* Spurpunk Title */
+.spurpunk-title {
+  position: absolute;
+  top: calc(199.5px - 175px / 2);   /* Centered at (547, 199.5) */
+  left: calc(50% - 536px / 2);      /* Center horizontally */
+  width: 536px;
+  height: 175px;
+}
+
+/* Skeleton Frame */
+.skeleton-frame {
+  position: absolute;
+  top: calc(637.5px - 291px / 2);   /* Centered at (560, 637.5) */
+  left: calc(50% - 298px / 2);      /* Center horizontally */
+  width: 298px;
+  height: 291px;
+}
+
+/* Trailer Ribbon */
+.trailer-ribbon {
+  position: absolute;
+  top: calc(470px - 940px / 2);     /* Centered at (549, 470) */
+  left: calc(50% - 1098px / 2);     /* Center horizontally */
+  width: 1098px;
+  height: 940px;
+}
+
+/* Social Media */
+.social-media {
+  position: absolute;
+  top: calc(41.5px - 267px / 2);    /* Centered at (568, 41.5) */
+  left: calc(50% - 1142px / 2);     /* Center horizontally */
+  width: 1142px;
+  height: 267px;
+}
