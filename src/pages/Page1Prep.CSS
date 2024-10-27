@@ -1,0 +1,62 @@
+/* --- DO NOT DELETE. THIS IS FROM PROF. INSTRUCTIONS ABOUT SIZINGS --- */
+.page1 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Map (Yellow Section) */
+.bg-map {
+  position: absolute;
+  top: calc(609.5px - 1219px / 2);  
+  left: calc(50% - 1120px / 2);     
+  width: 1120px;
+  height: 1219px;
+  object-fit: cover;
+}
+
+/* Spurpunk Title (Red) */
+.spurpunk-title {
+  position: absolute;
+  top: calc(199.5px - 175px / 2);   
+  left: calc(50% - 536px / 2);      
+  width: 536px;
+  height: 175px;
+}
+
+/* Skeleton Frame (Blue) */
+.skeleton-frame {
+  position: absolute;
+  top: calc(637.5px - 291px / 2);   
+  left: calc(50% - 298px / 2);      
+  width: 298px;
+  height: 291px;
+}
+
+/* Trailer Ribbon (Green) */
+.trailer-ribbon {
+  position: absolute;
+  top: calc(470px - 940px / 2);     
+  left: calc(50% - 1098px / 2);     
+  width: 1098px;
+  height: 940px;
+}
+
+/* Social Media (Floating in) */
+.social-media {
+  position: absolute;
+  top: calc(41.5px - 267px / 2);    
+  left: calc(50% - 1142px / 2);     
+  width: 1142px;
+  height: 267px;
+}
+
+/* Are You a Spurpunk (Pink) */
+.are-you-spurpunk {
+  position: absolute;
+  top: calc(45vh - 175px / 2);   
+  left: calc(50% - 536px / 2);   
+  width: 536px;
+  height: auto;
+}

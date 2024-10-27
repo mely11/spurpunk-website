@@ -5,47 +5,60 @@
   overflow: hidden;
 }
 
-/* Background Map */
-.bg-map {
+.social-media {
   position: absolute;
-  top: calc(609.5px - 1219px / 2);  /* Centered at (547, 609.5) */
-  left: calc(50% - 1120px / 2);     /* Center horizontally */
-  width: 1120px;
-  height: 1219px;
+  top: 0;
+  left: calc(50% - 545px);
+  transform: translateX(-50%);
 }
 
-/* Spurpunk Title */
+/* Background Map (Yellow Section) */
+.bg-map {
+  position: absolute;
+  top: 50vh;  /* Position lower, leaving space for the movie */
+  left: calc(50% - 1120px / 2);  /* Center horizontally */
+  width: 1120px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Spurpunk Title (Red) */
 .spurpunk-title {
   position: absolute;
-  top: calc(199.5px - 175px / 2);   /* Centered at (547, 199.5) */
-  left: calc(50% - 536px / 2);      /* Center horizontally */
+  top: calc(199.5px - 175px / 2);   
+  left: calc(50% - 536px / 2);      
   width: 536px;
   height: 175px;
 }
 
-/* Skeleton Frame */
+/* Skeleton Frame (Blue) */
 .skeleton-frame {
   position: absolute;
-  top: calc(637.5px - 291px / 2);   /* Centered at (560, 637.5) */
-  left: calc(50% - 298px / 2);      /* Center horizontally */
-  width: 298px;
-  height: 291px;
+  top: 300px;
+  left: 43%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: auto;
 }
 
-/* Trailer Ribbon */
+/* Trailer Ribbon (Green) */
 .trailer-ribbon {
   position: absolute;
-  top: calc(470px - 940px / 2);     /* Centered at (549, 470) */
-  left: calc(50% - 1098px / 2);     /* Center horizontally */
-  width: 1098px;
-  height: 940px;
+  top: calc(300px + 190px);  /* Positioned right below the skeleton frame */
+  left: 41%;
+  transform: translateX(-50%);
+  width: auto;  /* Dynamic width */
+  max-width: 70vw;  /* Restrict to 70% of viewport */
+  height: auto;
 }
 
-/* Social Media */
-.social-media {
+/* Text under Trailer Ribbon (Pink) */
+.are-you-spurpunk {
   position: absolute;
-  top: calc(41.5px - 267px / 2);    /* Centered at (568, 41.5) */
-  left: calc(50% - 1142px / 2);     /* Center horizontally */
-  width: 1142px;
-  height: 267px;
+  top: calc(300px + 280px + 55px);  /* Placed under the trailer ribbon */
+  left: 34%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
 }

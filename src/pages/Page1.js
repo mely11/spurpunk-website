@@ -8,48 +8,59 @@ import BGMap from '../assets/images/BG_Map@.png';
 import SkeletonFrame from '../assets/images/Skeleton-Frame@.png';
 import TrailerRibbon from '../assets/images/Trailer-Ribbon@.png';
 import SocialMedia from '../assets/images/Social-Media@.png';
+import AreYouSpurpunk from '../assets/images/Are-You-a-Spurpunk@.png'; // (Pink) Image
 
 const Page1 = () => {
   return (
     <div className="page1">
-      {/* Background Map */}
+      {/* Background Map - Moves up and fades in */}
       <motion.img
         src={BGMap}
         alt="Background Map"
         className="bg-map"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        initial={{ y: '100vh', opacity: 0 }}  /* Start below the page and hidden */
+        animate={{ y: 0, opacity: 1 }}        /* Move to its position and fade in */
+        transition={{ duration: 1.5, ease: 'easeOut' }}
       />
 
-      {/* Spurpunk Title */}
+      {/* Spurpunk Title (Red) */}
       <motion.img
         src={SpurpunkTitle}
         alt="Spurpunk Title"
         className="spurpunk-title"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
       />
 
-      {/* Skeleton Frame */}
+      {/* Skeleton Frame (Blue) */}
       <motion.img
         src={SkeletonFrame}
         alt="Skeleton Frame"
         className="skeleton-frame"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5 }}
+        transition={{ delay: 1, duration: 1.5, ease: 'easeOut' }}
       />
 
-      {/* Trailer Ribbon */}
+      {/* Trailer Ribbon (Green) */}
       <motion.img
         src={TrailerRibbon}
         alt="Trailer Ribbon"
         className="trailer-ribbon"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.8 }}
+        transition={{ delay: 2, duration: 1.5, ease: 'easeOut' }}
+      />
+
+      {/* Are You a Spurpunk (Pink) */}
+      <motion.img
+        src={AreYouSpurpunk}
+        alt="Are You a Spurpunk?"
+        className="are-you-spurpunk"
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 2.5, duration: 1.5, ease: 'easeOut' }}
       />
 
       {/* Social Media Links */}
@@ -59,7 +70,7 @@ const Page1 = () => {
         className="social-media"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
       />
     </div>
   );
