@@ -55,7 +55,7 @@
 /* Trailer Ribbon (Green) */
 .trailer-ribbon {
   position: absolute;
-  top: calc(300px + 190px);  /* Positioned right below the skeleton frame */
+  top: calc(300px + 185px);  /* Positioned right below the skeleton frame */
   left: 39%;
   transform: translateX(-50%);
   width: auto;  /* Dynamic width */
@@ -66,8 +66,8 @@
 /* Text under Trailer Ribbon (Pink) */
 .are-you-spurpunk {
   position: absolute;
-  top: calc(300px + 280px + 55px);  /* Placed under the trailer ribbon */
-  left: 31.5%;
+  top: calc(300px + 280px + 65px);  /* Placed under the trailer ribbon */
+  left: 28%;
   transform: translateX(-50%);
   font-size: 2.5rem;
   text-align: center;
