@@ -24,7 +24,7 @@ const Page1 = () => {
         className="background-video"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.75, ease: 'easeOut' }} // Halved duration for x2 speed
+        transition={{ duration: 0.75, ease: 'easeOut' }}
       />
 
       {/* Background Map - Moves up and fades in */}
@@ -32,9 +32,9 @@ const Page1 = () => {
         src={BGMap}
         alt="Background Map"
         className="bg-map"
-        initial={{ y: '100vh', opacity: 0 }}  /* Start below the page and hidden */
-        animate={{ y: 0, opacity: 1 }}        /* Move to its position and fade in */
-        transition={{ duration: 0.75, ease: 'easeOut' }} // Halved duration for x2 speed
+        initial={{ y: '100vh', opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.75, ease: 'easeOut' }}
       />
 
       {/* Spurpunk Title (Red) */}
@@ -44,7 +44,7 @@ const Page1 = () => {
         className="spurpunk-title"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }} // Halved duration for x2 speed
+        transition={{ duration: 0.5, ease: 'easeOut' }}
       />
 
       {/* Skeleton Frame (Blue) */}
@@ -54,18 +54,20 @@ const Page1 = () => {
         className="skeleton-frame"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.75, ease: 'easeOut' }} // Halved delay and duration
+        transition={{ delay: 0.5, duration: 0.75, ease: 'easeOut' }}
       />
 
-      {/* Trailer Ribbon (Green) */}
-      <motion.img
-        src={TrailerRibbon}
-        alt="Trailer Ribbon"
-        className="trailer-ribbon"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 1, duration: 0.75, ease: 'easeOut' }} // Halved delay and duration
-      />
+      {/* Trailer Ribbon with Link (Green) */}
+      <a href="https://youtu.be/GEHQamurmBI?si=I8-euk5_BwD9Zi6m" target="_blank" rel="noopener noreferrer">
+        <motion.img
+          src={TrailerRibbon}
+          alt="Trailer Ribbon"
+          className="trailer-ribbon"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.75, ease: 'easeOut' }}
+        />
+      </a>
 
       {/* Are You a Spurpunk (Pink) */}
       <motion.img
@@ -74,7 +76,7 @@ const Page1 = () => {
         className="are-you-spurpunk"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1.25, duration: 0.75, ease: 'easeOut' }} // Halved delay and duration
+        transition={{ delay: 1.25, duration: 0.75, ease: 'easeOut' }}
       />
 
       {/* Social Media Links */}
@@ -84,7 +86,7 @@ const Page1 = () => {
         className="social-media"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }} // Halved duration for x2 speed
+        transition={{ duration: 0.5, ease: 'easeOut' }}
       />
     </div>
   );
