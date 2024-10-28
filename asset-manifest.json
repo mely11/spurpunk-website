@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/spurpunk-website/static/css/main.996dfa61.css",
+    "main.js": "/spurpunk-website/static/js/main.053dc925.js",
+    "static/js/453.a385e91d.chunk.js": "/spurpunk-website/static/js/453.a385e91d.chunk.js",
+    "static/media/BG_Map@.png": "/spurpunk-website/static/media/BG_Map@.5024f5eda9633711495e.png",
+    "static/media/Skeleton-Frame@.png": "/spurpunk-website/static/media/Skeleton-Frame@.9101841bcc8d92863f1f.png",
+    "static/media/Spurpunk-Title@.png": "/spurpunk-website/static/media/Spurpunk-Title@.fe32d0273fa6053c2b0f.png",
+    "static/media/Trailer-Ribbon@.png": "/spurpunk-website/static/media/Trailer-Ribbon@.b80780443764a0fc4582.png",
+    "static/media/Social-Media@.png": "/spurpunk-website/static/media/Social-Media@.bd6f1f2f2fc269bede27.png",
+    "static/media/Are-You-a-Spurpunk@.png": "/spurpunk-website/static/media/Are-You-a-Spurpunk@.2cead7a1c294e44d0ea0.png",
+    "index.html": "/spurpunk-website/index.html",
+    "main.996dfa61.css.map": "/spurpunk-website/static/css/main.996dfa61.css.map",
+    "main.053dc925.js.map": "/spurpunk-website/static/js/main.053dc925.js.map",
+    "453.a385e91d.chunk.js.map": "/spurpunk-website/static/js/453.a385e91d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.996dfa61.css",
+    "static/js/main.053dc925.js"
+  ]
+}
