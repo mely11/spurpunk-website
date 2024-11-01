@@ -73,3 +73,66 @@
   text-align: center;
   color: #fff;
 }
+
+/* Map Cactus2 Icon */
+.map-cactus2 {
+  position: absolute;
+  top: 556px;
+  left: 80.5px;
+  width: 159px;
+  height: 160px;
+}
+
+/* Compass Icon */
+.compass-icon {
+  position: absolute;
+  top: 693.5px;
+  left: 238.5px;
+  width: 181px;
+  height: 199px;
+}
+
+/* Map Grass Icon */
+.map-grass-icon {
+  position: absolute;
+  top: 671px;
+  left: 747.5px;
+  width: 53px;
+  height: 94px;
+}
+
+/* Map Cactus Icon */
+.map-cactus-icon {
+  position: absolute;
+  top: 566px;
+  left: 1017.5px;
+  width: 153px;
+  height: 136px;
+}
+
+/* Page 1 Dotted Line */
+.page1-dotted-line {
+  position: absolute;
+  top: 784px;
+  left: 501px;
+  width: 882px;
+  height: 380px;
+}
+
+/* Play Trailer Arrow */
+.play-trailer-arrow {
+  position: absolute;
+  top: 797.5px;
+  left: 503px;
+  width: 60px;
+  height: 63px;
+}
+
+/* Arrow Down */
+.arrow-down {
+  position: absolute;
+  top: 868px;
+  left: 1009px;
+  width: 92px;
+  height: 88px;
+}
