@@ -30,7 +30,7 @@ const Page1 = () => {
         className="background-video"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.75, ease: 'easeOut' }}
+        transition={{ duration: 0.375, ease: 'easeOut' }}
       />
 
       {/* Background Color Section */}
@@ -43,7 +43,7 @@ const Page1 = () => {
         className="spurpunk-title"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
+        transition={{ duration: 0.25, ease: 'easeOut' }}
       />
 
       {/* Skeleton Frame (Blue) */}
@@ -53,7 +53,7 @@ const Page1 = () => {
         className="skeleton-frame"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.75, ease: 'easeOut' }}
+        transition={{ delay: 0.25, duration: 0.375, ease: 'easeOut' }}
       />
 
       {/* Trailer Ribbon with Link (Green) */}
@@ -64,7 +64,7 @@ const Page1 = () => {
           className="trailer-ribbon"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1, duration: 0.75, ease: 'easeOut' }}
+          transition={{ delay: 0.5, duration: 0.375, ease: 'easeOut' }}
         />
       </a>
 
@@ -75,7 +75,7 @@ const Page1 = () => {
         className="are-you-spurpunk"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1.25, duration: 0.75, ease: 'easeOut' }}
+        transition={{ delay: 0.625, duration: 0.375, ease: 'easeOut' }}
       />
 
       {/* Social Media Links */}
@@ -85,7 +85,7 @@ const Page1 = () => {
         className="social-media"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
+        transition={{ duration: 0.25, ease: 'easeOut' }}
       />
 
       {/* Map Cactus2 Icon */}
@@ -95,7 +95,7 @@ const Page1 = () => {
         className="map-cactus2"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.75, ease: 'easeOut' }}
+        transition={{ delay: 0.75, duration: 0.375, ease: 'easeOut' }}
       />
 
       {/* Compass Icon */}
@@ -105,7 +105,7 @@ const Page1 = () => {
         className="compass-icon"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1.75, duration: 0.75, ease: 'easeOut' }}
+        transition={{ delay: 0.875, duration: 0.375, ease: 'easeOut' }}
       />
 
       {/* Map Grass Icon */}
@@ -115,7 +115,7 @@ const Page1 = () => {
         className="map-grass-icon"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 2, duration: 0.75, ease: 'easeOut' }}
+        transition={{ delay: 1, duration: 0.375, ease: 'easeOut' }}
       />
 
       {/* Duplicate Map Grass Icon with Different Position */}
@@ -125,7 +125,7 @@ const Page1 = () => {
         className="map-grass-icon-duplicate"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 2.25, duration: 0.75, ease: 'easeOut' }}
+        transition={{ delay: 1, duration: 0.375, ease: 'easeOut' }}
       />
 
       {/* Map Cactus Icon */}
@@ -135,7 +135,7 @@ const Page1 = () => {
         className="map-cactus-icon"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 2.5, duration: 0.75, ease: 'easeOut' }}
+        transition={{ delay: 1.25, duration: 0.375, ease: 'easeOut' }}
       />
 
       {/* Page 1 Dotted Line */}
@@ -145,7 +145,7 @@ const Page1 = () => {
         className="page1-dotted-line"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 2.75, duration: 0.75, ease: 'easeOut' }}
+        transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
       />
 
       {/* Play Trailer Arrow */}
@@ -155,7 +155,7 @@ const Page1 = () => {
         className="play-trailer-arrow"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 3, duration: 0.75, ease: 'easeOut' }}
+        transition={{ delay: 1.5, duration: 0.375, ease: 'easeOut' }}
       />
 
       {/* Arrow Down */}
@@ -165,7 +165,7 @@ const Page1 = () => {
         className="arrow-down"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 3.25, duration: 0.75, ease: 'easeOut' }}
+        transition={{ delay: 1.625, duration: 0.375, ease: 'easeOut' }}
       />
     </div>
   );
