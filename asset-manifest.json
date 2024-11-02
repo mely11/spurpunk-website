@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/spurpunk-website/static/css/main.a0d33b7b.css",
-    "main.js": "/spurpunk-website/static/js/main.6eb9979f.js",
+    "main.css": "/spurpunk-website/static/css/main.ffc2f6bf.css",
+    "main.js": "/spurpunk-website/static/js/main.50a7ab0b.js",
     "static/js/453.a385e91d.chunk.js": "/spurpunk-website/static/js/453.a385e91d.chunk.js",
     "static/media/Gameplay_BurialGrounds_Clips_Better.mp4": "/spurpunk-website/static/media/Gameplay_BurialGrounds_Clips_Better.68d1801557ec1b2a7216.mp4",
-    "static/media/BG_Map@.png": "/spurpunk-website/static/media/BG_Map@.5024f5eda9633711495e.png",
-    "static/media/Skeleton-Frame@.png": "/spurpunk-website/static/media/Skeleton-Frame@.9101841bcc8d92863f1f.png",
-    "static/media/Spurpunk-Title@.png": "/spurpunk-website/static/media/Spurpunk-Title@.fe32d0273fa6053c2b0f.png",
-    "static/media/Trailer-Ribbon@.png": "/spurpunk-website/static/media/Trailer-Ribbon@.b80780443764a0fc4582.png",
-    "static/media/Social-Media@.png": "/spurpunk-website/static/media/Social-Media@.bd6f1f2f2fc269bede27.png",
-    "static/media/Are-You-a-Spurpunk@.png": "/spurpunk-website/static/media/Are-You-a-Spurpunk@.2cead7a1c294e44d0ea0.png",
+    "static/media/Page1_Dotteed_Line@.png": "/spurpunk-website/static/media/Page1_Dotteed_Line@.607e45deae4d1e953ceb.png",
+    "static/media/Skeleton-Frame@.png": "/spurpunk-website/static/media/Skeleton-Frame@.d1754ed9ba41c1a19854.png",
+    "static/media/Spurpunk-Title@.png": "/spurpunk-website/static/media/Spurpunk-Title@.ad0a31065d1e4deb2097.png",
+    "static/media/map-cactus2-icon@.png": "/spurpunk-website/static/media/map-cactus2-icon@.a986c7f50ef8cca04b14.png",
+    "static/media/compass-icon@.png": "/spurpunk-website/static/media/compass-icon@.22e1606edf81b629f81c.png",
+    "static/media/Social-Media@.png": "/spurpunk-website/static/media/Social-Media@.053835aef139d2e961ff.png",
+    "static/media/Trailer-Ribbon@.png": "/spurpunk-website/static/media/Trailer-Ribbon@.f97ae0b6c4c04cd52b4d.png",
+    "static/media/map-cactus-icon@.png": "/spurpunk-website/static/media/map-cactus-icon@.2b8ffa240e29b3154083.png",
+    "static/media/Arrow_Down@.png": "/spurpunk-website/static/media/Arrow_Down@.9e0ad1ac156abf159487.png",
+    "static/media/Are-You-a-Spurpunk@.png": "/spurpunk-website/static/media/Are-You-a-Spurpunk@.fe324ad759f8c1b3efc3.png",
     "index.html": "/spurpunk-website/index.html",
-    "main.a0d33b7b.css.map": "/spurpunk-website/static/css/main.a0d33b7b.css.map",
-    "main.6eb9979f.js.map": "/spurpunk-website/static/js/main.6eb9979f.js.map",
+    "main.ffc2f6bf.css.map": "/spurpunk-website/static/css/main.ffc2f6bf.css.map",
+    "main.50a7ab0b.js.map": "/spurpunk-website/static/js/main.50a7ab0b.js.map",
     "453.a385e91d.chunk.js.map": "/spurpunk-website/static/js/453.a385e91d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0d33b7b.css",
-    "static/js/main.6eb9979f.js"
+    "static/css/main.ffc2f6bf.css",
+    "static/js/main.50a7ab0b.js"
   ]
 }
