@@ -12,8 +12,19 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Make sure the video covers the entire background */
-  z-index: -1; /* Keep the video behind other elements */
+  object-fit: cover;
+  z-index: -3; /* Keep the video at the very back */
+}
+
+/* Background Color (Above Video, Below Elements) */
+.background-color {
+  position: absolute;
+  top: 50vh; /* Start from the middle to the bottom */
+  left: 0;
+  width: 100%;
+  height: 50vh; /* Cover the lower half of the viewport */
+  background-color: #df9542;
+  z-index: -2; /* Place it above the video, below the rest */
 }
 
 .social-media {
@@ -21,16 +32,6 @@
   top: 0;
   left: calc(50% - 545px);
   transform: translateX(-50%);
-}
-
-/* Background Map (Yellow Section) */
-.bg-map {
-  position: absolute;
-  top: 50vh;  /* Position lower, leaving space for the movie */
-  left: calc(50% - 1120px / 2);  /* Center horizontally */
-  width: 1120px;
-  height: auto;
-  object-fit: cover;
 }
 
 /* Spurpunk Title (Red) */
@@ -81,6 +82,7 @@
   left: 40px;
   width: 159px;
   height: 160px;
+  z-index: -1;
 }
 
 /* Compass Icon */
@@ -101,6 +103,15 @@
   height: 94px;
 }
 
+/* Duplicate Map Grass Icon */
+.map-grass-icon-duplicate {
+  position: absolute;
+  top: 500px;
+  left: 900px;
+  width: 53px;
+  height: 94px;
+}
+
 /* Map Cactus Icon */
 .map-cactus-icon {
   position: absolute;
@@ -108,22 +119,24 @@
   left: 1017.5px;
   width: 153px;
   height: 136px;
+  z-index: -1;
 }
 
 /* Page 1 Dotted Line */
 .page1-dotted-line {
   position: absolute;
-  top: 784px;
-  left: 501px;
+  top: calc(784px - 750px / 2);
+  left: calc(50% - 1000px / 2);
   width: 882px;
   height: 380px;
+  z-index: -2;
 }
 
 /* Play Trailer Arrow */
 .play-trailer-arrow {
   position: absolute;
-  top: 797.5px;
-  left: 503px;
+  top: calc(797.5px - 505px / 2); 
+  left: calc(50% - 120px / 2);
   width: 60px;
   height: 63px;
 }
@@ -131,8 +144,8 @@
 /* Arrow Down */
 .arrow-down {
   position: absolute;
-  top: 868px;
-  left: 1009px;
+  top: calc(868px - 500px / 2);
+  left: calc(50% + (1009px - 1220px / 2));
   width: 92px;
   height: 88px;
 }

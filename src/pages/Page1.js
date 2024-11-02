@@ -4,7 +4,6 @@ import './Page1.css';
 
 // Importing images
 import SpurpunkTitle from '../assets/images/Spurpunk-Title@.png';
-import BGMap from '../assets/images/BG_Map@.png';
 import SkeletonFrame from '../assets/images/Skeleton-Frame@.png';
 import TrailerRibbon from '../assets/images/Trailer-Ribbon@.png';
 import SocialMedia from '../assets/images/Social-Media@.png';
@@ -34,15 +33,8 @@ const Page1 = () => {
         transition={{ duration: 0.75, ease: 'easeOut' }}
       />
 
-      {/* Background Map - Moves up and fades in */}
-      <motion.img
-        src={BGMap}
-        alt="Background Map"
-        className="bg-map"
-        initial={{ y: '100vh', opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.75, ease: 'easeOut' }}
-      />
+      {/* Background Color Section */}
+      <div className="background-color"></div>
 
       {/* Spurpunk Title (Red) */}
       <motion.img
@@ -126,6 +118,16 @@ const Page1 = () => {
         transition={{ delay: 2, duration: 0.75, ease: 'easeOut' }}
       />
 
+      {/* Duplicate Map Grass Icon with Different Position */}
+      <motion.img
+        src={MapGrassIcon}
+        alt="Map Grass Icon Duplicate"
+        className="map-grass-icon-duplicate"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 2.25, duration: 0.75, ease: 'easeOut' }}
+      />
+
       {/* Map Cactus Icon */}
       <motion.img
         src={MapCactusIcon}
@@ -133,7 +135,7 @@ const Page1 = () => {
         className="map-cactus-icon"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 2.25, duration: 0.75, ease: 'easeOut' }}
+        transition={{ delay: 2.5, duration: 0.75, ease: 'easeOut' }}
       />
 
       {/* Page 1 Dotted Line */}
@@ -143,7 +145,7 @@ const Page1 = () => {
         className="page1-dotted-line"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 2.5, duration: 0.75, ease: 'easeOut' }}
+        transition={{ delay: 2.75, duration: 0.75, ease: 'easeOut' }}
       />
 
       {/* Play Trailer Arrow */}
@@ -153,7 +155,7 @@ const Page1 = () => {
         className="play-trailer-arrow"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 2.75, duration: 0.75, ease: 'easeOut' }}
+        transition={{ delay: 3, duration: 0.75, ease: 'easeOut' }}
       />
 
       {/* Arrow Down */}
@@ -163,7 +165,7 @@ const Page1 = () => {
         className="arrow-down"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 3, duration: 0.75, ease: 'easeOut' }}
+        transition={{ delay: 3.25, duration: 0.75, ease: 'easeOut' }}
       />
     </div>
   );
