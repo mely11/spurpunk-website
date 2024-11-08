@@ -27,13 +27,6 @@
   z-index: -2; /* Place it above the video, below the rest */
 }
 
-.social-media {
-  position: absolute;
-  top: 0;
-  left: calc(50% - 545px);
-  transform: translateX(-50%);
-}
-
 /* Spurpunk Title (Red) */
 .spurpunk-title {
   position: absolute;
