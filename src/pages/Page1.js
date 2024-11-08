@@ -6,7 +6,16 @@ import './Page1.css';
 import SpurpunkTitle from '../assets/images/Spurpunk-Title@.png';
 import SkeletonFrame from '../assets/images/Skeleton-Frame@.png';
 import TrailerRibbon from '../assets/images/Trailer-Ribbon@.png';
-import SocialMedia from '../assets/images/Social-Media@.png';
+import DiscordNormal from '../assets/images/Discord_normal@.png';
+import DiscordPressed from '../assets/images/Discord_pressed@.png';
+import InstagramNormal from '../assets/images/Instagram_normal@.png';
+import InstagramPressed from '../assets/images/Instagram_pressed@.png';
+import YoutubeNormal from '../assets/images/Youtube_normal@.png';
+import YoutubePressed from '../assets/images/Youtube_pressed@.png';
+import XNormal from '../assets/images/X_normal@.png';
+import XPressed from '../assets/images/X_pressed@.png';
+import FacebookNormal from '../assets/images/Facebook_normal@.png';
+import FacebookPressed from '../assets/images/Facebook_pressed@.png';
 import AreYouSpurpunk from '../assets/images/Are-You-a-Spurpunk@.png';
 import MapCactus2Icon from '../assets/images/map-cactus2-icon@.png';
 import CompassIcon from '../assets/images/compass-icon@.png';
@@ -80,9 +89,41 @@ const Page1 = () => {
 
       {/* Social Media Links */}
       <motion.img
-        src={SocialMedia}
-        alt="Social Media Links"
-        className="social-media"
+        src={DiscordNormal}
+        alt="Discord Normal"
+        className="discord-normal"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.25, ease: 'easeOut' }}
+      />
+      <motion.img
+        src={InstagramNormal}
+        alt="Instagram Normal"
+        className="instagram-normal"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.25, ease: 'easeOut' }}
+      />
+      <motion.img
+        src={YoutubeNormal}
+        alt="Youtube Normal"
+        className="youtube-normal"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.25, ease: 'easeOut' }}
+      />
+      <motion.img
+        src={XNormal}
+        alt="X Normal"
+        className="x-normal"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.25, ease: 'easeOut' }}
+      />
+      <motion.img
+        src={FacebookNormal}
+        alt="Facebook Normal"
+        className="facebook-normal"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.25, ease: 'easeOut' }}
