@@ -276,3 +276,142 @@
   width: 58px;
   height: 58px;
 }
+
+/*Page 2*/
+
+/*Meet your instructors text*/
+.all-text {
+  position: absolute;
+  top: 115vh;  /* Adjusted to a relative height for responsiveness */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* Scales width responsively */
+  max-width: 1034px;
+  height: auto; /* Allows for height adjustment */
+  z-index: 3;
+}
+
+.all-text-background {
+  position: absolute;
+  top: 132vh; /* Relative position */
+  width: 100%;
+  height: 80vh;
+  z-index: 1;
+}
+
+/* Page 2 dotted line */
+.page2-dotted-line {
+  position: absolute;
+  top: 118vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 62vw; /* Makes width responsive */
+  max-width: 907px;
+  height: 110vh;
+  z-index: 1;
+}
+
+/* Responsive Text Backgrounds */
+.text-background1,
+.text-background2,
+.text-background3,
+.text-background4 {
+  position: absolute;
+  top: 188vh;
+  width: 18vw; /* Responsive width */
+  height: 18vh; /* Maintain aspect ratio */
+  z-index: 2;
+}
+
+.text-background1 { left: 8.5vw; }
+.text-background2 { left: 30vw; }
+.text-background3 { left: 50vw; }
+.text-background4 { left: 70vw; }
+
+/* Hero Frames */
+.hero-frame1,
+.hero-frame2,
+.hero-frame3,
+.hero-frame4 {
+  position: absolute;
+  top: 144vh;
+  width: 19vw; /* Responsive width */
+  height: 43vh; /* Maintain aspect ratio */
+  z-index: 2;
+}
+
+.hero-frame1 { left: 8vw; }
+.hero-frame2 { left: 29vw; }
+.hero-frame3 { left: 50vw; }
+.hero-frame4 { left: 71vw; }
+
+/* Heroes */
+.sean, .margarita, .phil{
+  position: absolute;
+  width: 16vw; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 2;
+}
+
+
+.sean { top: 144.1vh; left: 9vw; }
+.margarita { top: 146vh; left: 31vw; }
+.phil { top: 144.6vh; left: 51vw; }
+.mickey { 
+  top: 150.5vh; 
+  left: 71vw; 
+  position: absolute;
+  width: 20vw; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 2;
+}
+
+/* Silhouettes */
+.sean-gear-silhouette,
+.margarita-cards-silhouette,
+.phil-bomb-silhouette,
+.mickey-skull-silhouette {
+  position: absolute;
+  top: 131vh;
+  width: 12vw; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 1;
+}
+
+.sean-gear-silhouette { left: 11vw; }
+.margarita-cards-silhouette { left: 33vw; }
+.phil-bomb-silhouette { left: 53vw; }
+.mickey-skull-silhouette { left: 74vw; }
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .all-text {
+    width: 90%; /* Increased width for mobile */
+    top: 90vh; /* Adjusted position */
+  }
+
+  .text-background1,
+  .text-background2,
+  .text-background3,
+  .text-background4,
+  .hero-frame1,
+  .hero-frame2,
+  .hero-frame3,
+  .hero-frame4,
+  .sean,
+  .margarita,
+  .phil,
+  .mickey,
+  .sean-gear-silhouette,
+  .margarita-cards-silhouette,
+  .phil-bomb-silhouette,
+  .mickey-skull-silhouette {
+    width: 20vw; /* Reduced size for smaller screens */
+  }
+  
+  .page2-dotted-line {
+    width: 80vw;
+    top: 95vh;
+  }
+}
+
