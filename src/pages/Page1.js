@@ -383,16 +383,7 @@ const Page1 = () => {
       // animate={{ y: 0, opacity: 1 }}
       // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
     />
-    {/* Mickey */}
-    <motion.img
-      src={SeanGear}
-      alt="Sean's gear"
-      className="sean-gear"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-    {/* Mickey */}
+    {/* Margarita's cards silhouette */}
     <motion.img
       src={MargaritaCardsSilhouette}
       alt="Margarita's cards silhouette"
@@ -401,16 +392,7 @@ const Page1 = () => {
       // animate={{ y: 0, opacity: 1 }}
       // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
     />
-    {/* Mickey */}
-    <motion.img
-      src={MargaritaCards}
-      alt="Margarita's Cards"
-      className="margarita-cards"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-    {/* Mickey */}
+    {/* Phils' bomb silhouette */}
     <motion.img
       src={PhilBombSilhouette}
       alt="Phil's bomb silhouette"
@@ -419,16 +401,7 @@ const Page1 = () => {
       // animate={{ y: 0, opacity: 1 }}
       // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
     />
-    {/* Mickey */}
-    <motion.img
-      src={PhilBomb}
-      alt="Phil's Bomb"
-      className="phil-bomb"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-    {/* Mickey */}
+    {/* Mickey's skull silhouette */}
     <motion.img
       src={MickeySkullSilhouette}
       alt="Mickey's skull silhouette"
@@ -437,15 +410,7 @@ const Page1 = () => {
       // animate={{ y: 0, opacity: 1 }}
       // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
     />
-    {/* Mickey */}
-    <motion.img
-      src={MickeySkull}
-      alt="Mickey's skull"
-      className="mickey-skull"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
+    
 
     </div>
 
