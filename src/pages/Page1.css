@@ -3,6 +3,7 @@
   width: 100vw;
   height: 100vh;
   overflow-y: auto;
+  background-color: #df9542;
 }
 
 /* Background Video */
@@ -13,7 +14,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -3; /* Keep the video at the very back */
+   /* Keep the video at the very back */
 }
 
 /* Background Color (Above Video, Below Elements) */
@@ -22,9 +23,9 @@
   top: 50vh; /* Start from the middle to the bottom */
   left: 0;
   width: 100%;
-  height: 50vh; /* Cover the lower half of the viewport */
+  height: 100%; /* Cover the lower half of the viewport */
   background-color: #df9542;
-  z-index: -2; /* Place it above the video, below the rest */
+  z-index: 1; /* Place it above the video, below the rest */
 }
 
 /* Spurpunk Title (Red) */
@@ -34,6 +35,7 @@
   left: calc(50% - 536px / 2);      
   width: 536px;
   height: 175px;
+  z-index: 2;
 }
 
 /* Skeleton Frame (Blue) */
@@ -44,6 +46,7 @@
   transform: translateX(-50%);
   width: 280px;
   height: auto;
+  z-index: 2;
 }
 
 /* Trailer Ribbon (Green) */
@@ -55,6 +58,7 @@
   width: auto;  /* Dynamic width */
   max-width: 70vw;  /* Restrict to 70% of viewport */
   height: auto;
+  z-index: 2;
 }
 
 /* Text under Trailer Ribbon (Pink) */
@@ -66,6 +70,7 @@
   font-size: 2.5rem;
   text-align: center;
   color: #fff;
+  z-index: 2;
 }
 
 /* Map Cactus2 Icon */
@@ -75,7 +80,7 @@
   left: 40px;
   width: 159px;
   height: 160px;
-  z-index: -1;
+  z-index: 2;
 }
 
 /* Compass Icon */
@@ -85,6 +90,7 @@
   left: 210px;
   width: 200px;
   height: 200px;
+  z-index: 1;
 }
 
 /* Map Grass Icon */
@@ -94,6 +100,7 @@
   left: 200px;
   width: 53px;
   height: 94px;
+  z-index: 2;
 }
 
 /* Duplicate Map Grass Icon */
@@ -103,6 +110,7 @@
   left: 900px;
   width: 53px;
   height: 94px;
+  z-index: 1;
 }
 
 /* Map Cactus Icon */
@@ -112,7 +120,7 @@
   left: 1017.5px;
   width: 153px;
   height: 136px;
-  z-index: -1;
+  z-index: 2;
 }
 
 /* Page 1 Dotted Line */
@@ -122,7 +130,7 @@
   left: calc(50% - 1000px / 2);
   width: 882px;
   height: 380px;
-  z-index: -2;
+  z-index: 1;
 }
 
 /* Play Trailer Arrow */
@@ -132,6 +140,7 @@
   left: calc(50% - 120px / 2);
   width: 60px;
   height: 63px;
+  z-index: 2;
 }
 
 /* Arrow Down */
@@ -141,6 +150,7 @@
   left: calc(50% + (1009px - 1220px / 2));
   width: 92px;
   height: 88px;
+  z-index: 2;
 }
 
 /* Discord Button */
@@ -325,8 +335,8 @@
 
 .text-background1 { left: 8.5vw; }
 .text-background2 { left: 30vw; }
-.text-background3 { left: 50vw; }
-.text-background4 { left: 70vw; }
+.text-background3 { left: 51.5vw; }
+.text-background4 { left: 73vw; }
 
 /* Hero Frames */
 .hero-frame1,
@@ -341,9 +351,9 @@
 }
 
 .hero-frame1 { left: 8vw; }
-.hero-frame2 { left: 29vw; }
-.hero-frame3 { left: 50vw; }
-.hero-frame4 { left: 71vw; }
+.hero-frame2 { left: 29.5vw; }
+.hero-frame3 { left: 51vw; }
+.hero-frame4 { left: 72.5vw; }
 
 /* Heroes */
 .sean, .margarita, .phil{
@@ -359,7 +369,7 @@
 .phil { top: 144.6vh; left: 51vw; }
 .mickey { 
   top: 150.5vh; 
-  left: 71vw; 
+  left: 69vw; 
   position: absolute;
   width: 20vw; /* Responsive width */
   height: auto; /* Maintain aspect ratio */
@@ -380,8 +390,8 @@
 
 .sean-gear-silhouette { left: 11vw; }
 .margarita-cards-silhouette { left: 33vw; }
-.phil-bomb-silhouette { left: 53vw; }
-.mickey-skull-silhouette { left: 74vw; }
+.phil-bomb-silhouette { left: 54vw; }
+.mickey-skull-silhouette { left: 76vw; }
 
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
