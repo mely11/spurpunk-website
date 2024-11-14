@@ -245,7 +245,7 @@
 
 /* GooglePlay Button */
 .googleplay-btn {
-  top: calc(39.5px - 51px / 2);
+  top: calc(39.5px - 60px / 2);
   left: calc(992px - 160px / 2);
   width: 160px;
   height: 51px;
@@ -253,7 +253,7 @@
 
 /* AppleStore Button */
 .applestore-btn {
-  top: calc(39.5px - 51px / 2);
+  top: calc(39.5px - 60px / 2);
   left: calc(811px - 160px / 2);
   width: 160px;
   height: 51px;
