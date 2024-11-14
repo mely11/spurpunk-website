@@ -8,13 +8,12 @@
 /* Black Background for Top Section */
 .top-bar {
   position: fixed;
-  /* Stays at the top of the viewport */
   top: 0;
   left: 0;
   width: 100%;
   height: 70px;
   background-color: #000;
-  z-index: 3;
+  z-index: 5;
 }
 
 /* Background Video */
@@ -26,7 +25,6 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  /* Layer 1: Background video */
 }
 
 /* Background Color (Above Video, Below Elements) */
@@ -38,10 +36,9 @@
   height: 50vh;
   background-color: #df9542;
   z-index: 2;
-  /* Layer 2: Background color */
 }
 
-/* Layer 3: Core Components */
+/* Core Elements */
 .spurpunk-title,
 .skeleton-frame,
 .trailer-ribbon,
@@ -51,14 +48,15 @@
 .map-grass-icon,
 .map-grass-icon-duplicate,
 .map-cactus-icon,
+.page1-dotted-line,
 .arrow-down,
 .page1-landmass,
 .play-trailer-normal {
   position: absolute;
   z-index: 4;
-  /* Layer 4: Main core elements */
 }
 
+/* Specific Elements */
 .spurpunk-title {
   top: calc(199.5px - 175px / 2);
   left: calc(50% - 536px / 2);
@@ -97,9 +95,9 @@
   left: 40px;
   width: 159px;
   height: 160px;
+  z-index: 6;  /* Above dotted line */
 }
 
-/* Compass Icon */
 .compass-icon {
   top: 50vh;
   left: 210px;
@@ -107,7 +105,6 @@
   height: 200px;
 }
 
-/* Map Grass Icon */
 .map-grass-icon {
   top: 671px;
   left: 200px;
@@ -127,6 +124,7 @@
   left: 1017.5px;
   width: 153px;
   height: 136px;
+  z-index: 6;  /* Above dotted line */
 }
 
 .page1-dotted-line {
@@ -134,7 +132,6 @@
   left: calc(50% - 1000px / 2);
   width: 882px;
   height: 380px;
-  z-index: 5;
 }
 
 .arrow-down {
@@ -150,11 +147,10 @@
   left: 0;
   width: 100%;
   height: auto;
-  z-index: 3;
-  /* Layer 3: Beneath core components */
+  z-index: 3;  /* Below core elements */
 }
 
-/* Play Trailer Button (Normal and Pressed) */
+/* Play Trailer Button */
 .play-trailer-normal {
   top: calc(300px + 252px);
   left: 44.3%;
@@ -162,10 +158,10 @@
   width: 61px;
   height: 63px;
   cursor: pointer;
-  z-index: 5;
+  z-index: 5;  /* Above the rest of the core elements */
 }
 
-/* Layer 5: Social Media and Action Buttons (Aligned with Top Bar) */
+/* Social Media Buttons */
 .discord-normal,
 .instagram-normal,
 .youtube-normal,
@@ -178,42 +174,16 @@
   position: absolute;
   top: 8px;
   z-index: 5;
-  /* Layer 5: Social media buttons and action buttons aligned with the black top bar */
   cursor: pointer;
   transition: all 0.3s ease;
-  /* Smooth transition for state change */
 }
 
 /* Specific Social Media Button Positions */
-.discord-normal {
-  left: 510px;
-  width: 58px;
-  height: 58px;
-}
-
-.instagram-normal {
-  left: 440px;
-  width: 58px;
-  height: 59px;
-}
-
-.youtube-normal {
-  left: 370px;
-  width: 57px;
-  height: 59px;
-}
-
-.x-normal {
-  left: 300px;
-  width: 57px;
-  height: 59px;
-}
-
-.facebook-normal {
-  left: 230px;
-  width: 57px;
-  height: 59px;
-}
+.discord-normal { left: 510px; }
+.instagram-normal { left: 440px; }
+.youtube-normal { left: 370px; }
+.x-normal { left: 300px; }
+.facebook-normal { left: 230px; }
 
 /* PressKit Button */
 .presskit-button {
