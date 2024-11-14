@@ -11,8 +11,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px; /* Covers all the buttons */
-  background-color: #000; /* Black color to match the mockup */
+  height: 70px;
+  background-color: #000;
   z-index: 5; /* Layer 5: Above everything else */
 }
 
@@ -158,8 +158,8 @@
 
 /* Play Trailer Button (Normal and Pressed) */
 .play-trailer-button {
-  top: calc(300px + 185px);  /* Same as trailer-ribbon */
-  left: 55%;                 /* Adjusted slightly to the right of the trailer ribbon */
+  top: calc(300px + 252px);
+  left: 44.3%;
   transform: translateX(-50%);
   width: 61px;
   height: 63px;
