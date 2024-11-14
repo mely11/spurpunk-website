@@ -182,11 +182,101 @@
   width: 57px; height: 59px;
 }
 
+/* Discord Button (Normal and Pressed) */
+.discord-normal {
+  position: absolute;
+  top: calc(37px - 58px / 2);  /* Centered vertically at y = 37 */
+  left: calc(547px - 58px / 2);  /* Centered horizontally at x = 547 */
+  width: 58px;
+  height: 58px;
+  cursor: pointer;
+}
+.discord-pressed {
+  position: absolute;
+  top: calc(38.5px - 55px / 2);  /* Centered vertically at y = 38.5 */
+  left: calc(547px - 56px / 2);  /* Centered horizontally at x = 547 */
+  width: 56px;
+  height: 55px;
+  cursor: pointer;
+}
+
+/* Instagram Button (Normal and Pressed) */
+.instagram-normal {
+  position: absolute;
+  top: calc(41.5px - 59px / 2);  /* Centered vertically at y = 41.5 */
+  left: calc(478px - 58px / 2);  /* Centered horizontally at x = 478 */
+  width: 58px;
+  height: 59px;
+  cursor: pointer;
+}
+.instagram-pressed {
+  position: absolute;
+  top: calc(41.5px - 55px / 2);  /* Centered vertically at y = 41.5 */
+  left: calc(478.5px - 55px / 2);  /* Centered horizontally at x = 478.5 */
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+}
+
+/* YouTube Button (Normal and Pressed) */
+.youtube-normal {
+  position: absolute;
+  top: calc(42.5px - 59px / 2);  /* Centered vertically at y = 42.5 */
+  left: calc(406.5px - 57px / 2);  /* Centered horizontally at x = 406.5 */
+  width: 57px;
+  height: 59px;
+  cursor: pointer;
+}
+.youtube-pressed {
+  position: absolute;
+  top: calc(42.5px - 55px / 2);  /* Centered vertically at y = 42.5 */
+  left: calc(406px - 54px / 2);  /* Centered horizontally at x = 406 */
+  width: 54px;
+  height: 55px;
+  cursor: pointer;
+}
+
+/* X Button (Normal and Pressed) */
+.x-normal {
+  position: absolute;
+  top: calc(42.5px - 59px / 2);  /* Centered vertically at y = 42.5 */
+  left: calc(335.5px - 57px / 2);  /* Centered horizontally at x = 335.5 */
+  width: 57px;
+  height: 59px;
+  cursor: pointer;
+}
+.x-pressed {
+  position: absolute;
+  top: calc(42.5px - 55px / 2);  /* Centered vertically at y = 42.5 */
+  left: calc(335px - 54px / 2);  /* Centered horizontally at x = 335 */
+  width: 54px;
+  height: 55px;
+  cursor: pointer;
+}
+
+/* Facebook Button (Normal and Pressed) */
+.facebook-normal {
+  position: absolute;
+  top: calc(42.5px - 59px / 2);  /* Centered vertically at y = 42.5 */
+  left: calc(265.5px - 57px / 2);  /* Centered horizontally at x = 265.5 */
+  width: 57px;
+  height: 59px;
+  cursor: pointer;
+}
+.facebook-pressed {
+  position: absolute;
+  top: calc(42.5px - 55px / 2);  /* Centered vertically at y = 42.5 */
+  left: calc(265px - 54px / 2);  /* Centered horizontally at x = 265 */
+  width: 54px;
+  height: 55px;
+  cursor: pointer;
+}
+
 /* PressKit Button */
 .presskit-button {
   position: absolute;
-  top: calc(39.5px - 51px / 2);  /* Center vertically at y = 39.5 */
-  left: calc(107px - 160px / 2);  /* Center horizontally at x = 107 */
+  top: calc(39.5px - 51px / 2);  /* Centered vertically at y = 39.5 */
+  left: calc(107px - 160px / 2);  /* Centered horizontally at x = 107 */
   width: 160px;
   height: 51px;
   cursor: pointer; /* Make button clickable */
@@ -195,8 +285,8 @@
 /* Buy Now Button */
 .buy-now {
   position: absolute;
-  top: calc(36.5px - 29px / 2);  /* Center vertically at y = 36.5 */
-  left: calc(654.5px - 89px / 2);  /* Center horizontally at x = 654.5 */
+  top: calc(36.5px - 29px / 2);  /* Centered vertically at y = 36.5 */
+  left: calc(654.5px - 89px / 2);  /* Centered horizontally at x = 654.5 */
   width: 89px;
   height: 29px;
   cursor: pointer; /* Make button clickable */
@@ -205,35 +295,39 @@
 /* GooglePlay Button */
 .googleplay-btn {
   position: absolute;
-  top: calc(39.5px - 51px / 2);
-  left: calc(50% + (992px - 545px));
+  top: calc(39.5px - 51px / 2);  /* Centered vertically at y = 39.5 */
+  left: calc(992px - 160px / 2);  /* Centered horizontally at x = 992 */
   width: 160px;
   height: 51px;
+  cursor: pointer; /* Make button clickable */
 }
 
 /* AppleStore Button */
 .applestore-btn {
   position: absolute;
-  top: calc(39.5px - 51px / 2);
-  left: calc(50% + (811px - 545px));
+  top: calc(39.5px - 51px / 2);  /* Centered vertically at y = 39.5 */
+  left: calc(811px - 160px / 2);  /* Centered horizontally at x = 811 */
   width: 160px;
   height: 51px;
+  cursor: pointer; /* Make button clickable */
 }
 
 /* Play Trailer Button (Normal and Pressed) */
 .play-trailer-normal {
   position: absolute;
-  top: calc(799.5px - 63px / 2);
-  left: calc(50% - 503.5px);
+  top: calc(799.5px - 63px / 2);  /* Centered vertically at y = 799.5 */
+  left: calc(503.5px - 61px / 2);  /* Centered horizontally at x = 503.5 */
   width: 61px;
   height: 63px;
+  cursor: pointer; /* Make button clickable */
 }
 .play-trailer-pressed {
   position: absolute;
-  top: calc(800px - 58px / 2);
-  left: calc(50% - 504px);
+  top: calc(800px - 58px / 2);  /* Centered vertically at y = 800 */
+  left: calc(504px - 58px / 2);  /* Centered horizontally at x = 504 */
   width: 58px;
   height: 58px;
+  cursor: pointer; /* Make button clickable */
 }
 
 /* Added Press Interaction */
