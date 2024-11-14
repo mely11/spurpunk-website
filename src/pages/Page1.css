@@ -25,11 +25,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-<<<<<<< HEAD
-   /* Keep the video at the very back */
-=======
   z-index: 1;
->>>>>>> main
 }
 
 /* Background Color (Above Video, Below Elements) */
@@ -38,15 +34,9 @@
   top: 50vh;
   left: 0;
   width: 100%;
-<<<<<<< HEAD
-  height: 100%; /* Cover the lower half of the viewport */
-  background-color: #df9542;
-  z-index: 1; /* Place it above the video, below the rest */
-=======
   height: 50vh;
   background-color: #df9542;
   z-index: 2;
->>>>>>> main
 }
 
 /* Core Elements */
@@ -73,7 +63,6 @@
   left: calc(50% - 536px / 2);
   width: 536px;
   height: 175px;
-  z-index: 2;
 }
 
 .skeleton-frame {
@@ -82,7 +71,6 @@
   transform: translateX(-50%);
   width: 280px;
   height: auto;
-  z-index: 2;
 }
 
 .trailer-ribbon {
@@ -92,7 +80,6 @@
   width: auto;
   max-width: 70vw;
   height: auto;
-  z-index: 2;
 }
 
 .are-you-spurpunk {
@@ -102,7 +89,6 @@
   font-size: 2.5rem;
   text-align: center;
   color: #fff;
-  z-index: 2;
 }
 
 .map-cactus2 {
@@ -110,11 +96,7 @@
   left: 40px;
   width: 159px;
   height: 160px;
-<<<<<<< HEAD
-  z-index: 2;
-=======
   z-index: 6;  /* Above dotted line */
->>>>>>> main
 }
 
 .compass-icon {
@@ -122,7 +104,6 @@
   left: 210px;
   width: 200px;
   height: 200px;
-  z-index: 1;
 }
 
 .map-grass-icon {
@@ -130,7 +111,6 @@
   left: 200px;
   width: 53px;
   height: 94px;
-  z-index: 2;
 }
 
 .map-grass-icon-duplicate {
@@ -138,19 +118,13 @@
   left: 900px;
   width: 53px;
   height: 94px;
-  z-index: 1;
 }
 
 .map-cactus-icon {
   top: 300px;
   left: 1017.5px;
   width: 153px;
-  height: 136px;
-<<<<<<< HEAD
-  z-index: 2;
-=======
-  z-index: 6;  /* Above dotted line */
->>>>>>> main
+  height: 136px; /* Above dotted line */
 }
 
 .page1-dotted-line {
@@ -158,31 +132,13 @@
   left: calc(50% - 1000px / 2);
   width: 882px;
   height: 380px;
-<<<<<<< HEAD
-  z-index: 1;
 }
 
-/* Play Trailer Arrow */
-.play-trailer-arrow {
-  position: absolute;
-  top: calc(797.5px - 505px / 2); 
-  left: calc(50% - 120px / 2);
-  width: 60px;
-  height: 63px;
-  z-index: 2;
-}
-
-/* Arrow Down */
-=======
-}
-
->>>>>>> main
 .arrow-down {
   top: calc(868px - 500px / 2);
   left: calc(50% + (1009px - 1220px / 2));
   width: 92px;
   height: 88px;
-  z-index: 2;
 }
 
 /* Page 1 Landmass Layer */
@@ -259,7 +215,6 @@
   left: calc(811px - 160px / 2);
   width: 160px;
   height: 51px;
-<<<<<<< HEAD
 }
 
 /* Play Trailer Button (Normal) */
@@ -291,7 +246,7 @@
   width: 100%; /* Scales width responsively */
   max-width: 1034px;
   height: auto; /* Allows for height adjustment */
-  z-index: 3;
+  z-index: 6;
 }
 
 .all-text-background {
@@ -299,7 +254,7 @@
   top: 132vh; /* Relative position */
   width: 100%;
   height: 80vh;
-  z-index: 1;
+  z-index: 3;
 }
 
 /* Page 2 dotted line */
@@ -311,7 +266,7 @@
   width: 62vw; /* Makes width responsive */
   max-width: 907px;
   height: 110vh;
-  z-index: 1;
+  z-index: 4;
 }
 
 /* Responsive Text Backgrounds */
@@ -323,7 +278,7 @@
   top: 188vh;
   width: 18vw; /* Responsive width */
   height: 18vh; /* Maintain aspect ratio */
-  z-index: 2;
+  z-index: 5;
 }
 
 .text-background1 { left: 8.5vw; }
@@ -340,7 +295,7 @@
   top: 144vh;
   width: 19vw; /* Responsive width */
   height: 43vh; /* Maintain aspect ratio */
-  z-index: 2;
+  z-index: 4;
 }
 
 .hero-frame1 { left: 8vw; }
@@ -349,11 +304,11 @@
 .hero-frame4 { left: 72.5vw; }
 
 /* Heroes */
-.sean, .margarita, .phil{
+.sean, .margarita, .phil, .mickey{
   position: absolute;
   width: 16vw; /* Responsive width */
   height: auto; /* Maintain aspect ratio */
-  z-index: 2;
+  z-index: 5;
 }
 
 
@@ -366,7 +321,6 @@
   position: absolute;
   width: 20vw; /* Responsive width */
   height: auto; /* Maintain aspect ratio */
-  z-index: 2;
 }
 
 /* Silhouettes */
@@ -418,6 +372,3 @@
   }
 }
 
-=======
-}
->>>>>>> main
