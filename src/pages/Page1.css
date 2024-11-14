@@ -15,7 +15,6 @@
   height: 70px;
   background-color: #000;
   z-index: 5;
-  /* Layer 5: Above everything else */
 }
 
 /* Background Video */
@@ -52,7 +51,6 @@
 .map-grass-icon,
 .map-grass-icon-duplicate,
 .map-cactus-icon,
-.page1-dotted-line,
 .arrow-down,
 .page1-landmass,
 .play-trailer-normal {
@@ -136,6 +134,7 @@
   left: calc(50% - 1000px / 2);
   width: 882px;
   height: 380px;
+  z-index: 5;
 }
 
 .arrow-down {
