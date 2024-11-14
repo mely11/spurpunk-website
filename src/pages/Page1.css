@@ -163,8 +163,7 @@
   width: 61px;
   height: 63px;
   cursor: pointer;
-  z-index: 4;
-  /* Layer 4: Main core elements */
+  z-index: 5;
 }
 
 /* Layer 5: Social Media and Action Buttons (Aligned with Top Bar) */
