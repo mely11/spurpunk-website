@@ -2,7 +2,8 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: auto;
+  background-color: #df9542;
 }
 
 /* Black Background for Top Section */
@@ -24,7 +25,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+<<<<<<< HEAD
+   /* Keep the video at the very back */
+=======
   z-index: 1;
+>>>>>>> main
 }
 
 /* Background Color (Above Video, Below Elements) */
@@ -33,9 +38,15 @@
   top: 50vh;
   left: 0;
   width: 100%;
+<<<<<<< HEAD
+  height: 100%; /* Cover the lower half of the viewport */
+  background-color: #df9542;
+  z-index: 1; /* Place it above the video, below the rest */
+=======
   height: 50vh;
   background-color: #df9542;
   z-index: 2;
+>>>>>>> main
 }
 
 /* Core Elements */
@@ -62,6 +73,7 @@
   left: calc(50% - 536px / 2);
   width: 536px;
   height: 175px;
+  z-index: 2;
 }
 
 .skeleton-frame {
@@ -70,6 +82,7 @@
   transform: translateX(-50%);
   width: 280px;
   height: auto;
+  z-index: 2;
 }
 
 .trailer-ribbon {
@@ -79,6 +92,7 @@
   width: auto;
   max-width: 70vw;
   height: auto;
+  z-index: 2;
 }
 
 .are-you-spurpunk {
@@ -88,6 +102,7 @@
   font-size: 2.5rem;
   text-align: center;
   color: #fff;
+  z-index: 2;
 }
 
 .map-cactus2 {
@@ -95,7 +110,11 @@
   left: 40px;
   width: 159px;
   height: 160px;
+<<<<<<< HEAD
+  z-index: 2;
+=======
   z-index: 6;  /* Above dotted line */
+>>>>>>> main
 }
 
 .compass-icon {
@@ -103,6 +122,7 @@
   left: 210px;
   width: 200px;
   height: 200px;
+  z-index: 1;
 }
 
 .map-grass-icon {
@@ -110,6 +130,7 @@
   left: 200px;
   width: 53px;
   height: 94px;
+  z-index: 2;
 }
 
 .map-grass-icon-duplicate {
@@ -117,6 +138,7 @@
   left: 900px;
   width: 53px;
   height: 94px;
+  z-index: 1;
 }
 
 .map-cactus-icon {
@@ -124,7 +146,11 @@
   left: 1017.5px;
   width: 153px;
   height: 136px;
+<<<<<<< HEAD
+  z-index: 2;
+=======
   z-index: 6;  /* Above dotted line */
+>>>>>>> main
 }
 
 .page1-dotted-line {
@@ -132,13 +158,31 @@
   left: calc(50% - 1000px / 2);
   width: 882px;
   height: 380px;
+<<<<<<< HEAD
+  z-index: 1;
 }
 
+/* Play Trailer Arrow */
+.play-trailer-arrow {
+  position: absolute;
+  top: calc(797.5px - 505px / 2); 
+  left: calc(50% - 120px / 2);
+  width: 60px;
+  height: 63px;
+  z-index: 2;
+}
+
+/* Arrow Down */
+=======
+}
+
+>>>>>>> main
 .arrow-down {
   top: calc(868px - 500px / 2);
   left: calc(50% + (1009px - 1220px / 2));
   width: 92px;
   height: 88px;
+  z-index: 2;
 }
 
 /* Page 1 Landmass Layer */
@@ -215,4 +259,165 @@
   left: calc(811px - 160px / 2);
   width: 160px;
   height: 51px;
+<<<<<<< HEAD
 }
+
+/* Play Trailer Button (Normal) */
+.play-trailer-normal {
+  position: absolute;
+  top: calc(799.5px - 63px / 2);
+  left: calc(50% - 503.5px);
+  width: 61px;
+  height: 63px;
+}
+
+/* Play Trailer Button (Pressed) */
+.play-trailer-pressed {
+  position: absolute;
+  top: calc(800px - 58px / 2);
+  left: calc(50% - 504px);
+  width: 58px;
+  height: 58px;
+}
+
+/*Page 2*/
+
+/*Meet your instructors text*/
+.all-text {
+  position: absolute;
+  top: 115vh;  /* Adjusted to a relative height for responsiveness */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* Scales width responsively */
+  max-width: 1034px;
+  height: auto; /* Allows for height adjustment */
+  z-index: 3;
+}
+
+.all-text-background {
+  position: absolute;
+  top: 132vh; /* Relative position */
+  width: 100%;
+  height: 80vh;
+  z-index: 1;
+}
+
+/* Page 2 dotted line */
+.page2-dotted-line {
+  position: absolute;
+  top: 118vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 62vw; /* Makes width responsive */
+  max-width: 907px;
+  height: 110vh;
+  z-index: 1;
+}
+
+/* Responsive Text Backgrounds */
+.text-background1,
+.text-background2,
+.text-background3,
+.text-background4 {
+  position: absolute;
+  top: 188vh;
+  width: 18vw; /* Responsive width */
+  height: 18vh; /* Maintain aspect ratio */
+  z-index: 2;
+}
+
+.text-background1 { left: 8.5vw; }
+.text-background2 { left: 30vw; }
+.text-background3 { left: 51.5vw; }
+.text-background4 { left: 73vw; }
+
+/* Hero Frames */
+.hero-frame1,
+.hero-frame2,
+.hero-frame3,
+.hero-frame4 {
+  position: absolute;
+  top: 144vh;
+  width: 19vw; /* Responsive width */
+  height: 43vh; /* Maintain aspect ratio */
+  z-index: 2;
+}
+
+.hero-frame1 { left: 8vw; }
+.hero-frame2 { left: 29.5vw; }
+.hero-frame3 { left: 51vw; }
+.hero-frame4 { left: 72.5vw; }
+
+/* Heroes */
+.sean, .margarita, .phil{
+  position: absolute;
+  width: 16vw; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 2;
+}
+
+
+.sean { top: 144.1vh; left: 9vw; }
+.margarita { top: 146vh; left: 31vw; }
+.phil { top: 144.6vh; left: 51vw; }
+.mickey { 
+  top: 150.5vh; 
+  left: 69vw; 
+  position: absolute;
+  width: 20vw; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 2;
+}
+
+/* Silhouettes */
+.sean-gear-silhouette,
+.margarita-cards-silhouette,
+.phil-bomb-silhouette,
+.mickey-skull-silhouette {
+  position: absolute;
+  top: 131vh;
+  width: 12vw; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 1;
+}
+
+.sean-gear-silhouette { left: 11vw; }
+.margarita-cards-silhouette { left: 33vw; }
+.phil-bomb-silhouette { left: 54vw; }
+.mickey-skull-silhouette { left: 76vw; }
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .all-text {
+    width: 90%; /* Increased width for mobile */
+    top: 90vh; /* Adjusted position */
+  }
+
+  .text-background1,
+  .text-background2,
+  .text-background3,
+  .text-background4,
+  .hero-frame1,
+  .hero-frame2,
+  .hero-frame3,
+  .hero-frame4,
+  .sean,
+  .margarita,
+  .phil,
+  .mickey,
+  .sean-gear-silhouette,
+  .margarita-cards-silhouette,
+  .phil-bomb-silhouette,
+  .mickey-skull-silhouette {
+    width: 20vw; /* Reduced size for smaller screens */
+  }
+  
+  .page2-dotted-line {
+    width: 80vw;
+    top: 95vh;
+  }
+}
+
+=======
+}
+>>>>>>> main
