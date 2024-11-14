@@ -49,8 +49,9 @@
 .map-grass-icon-duplicate,
 .map-cactus-icon,
 .page1-dotted-line,
-.play-trailer-arrow,
-.arrow-down {
+.arrow-down,
+.play-trailer-button,
+.page1-landmass {
   position: absolute;
   z-index: 4; /* Layer 4: Main core elements */
 }
@@ -97,7 +98,7 @@
 
 /* Compass Icon */
 .compass-icon {
-  top: 50vh; /* Start at the same height as the yellowish background color */
+  top: 50vh;
   left: 210px;
   width: 200px;
   height: 200px;
@@ -148,12 +149,22 @@
 
 /* Page 1 Landmass Layer */
 .page1-landmass {
-  position: absolute;
   top: 50vh;
   left: 0;
   width: 100%;
   height: auto;
   z-index: 3; /* Layer 3: Beneath core components */
+}
+
+/* Play Trailer Button (Normal and Pressed) */
+.play-trailer-button {
+  top: calc(300px + 185px);  /* Same as trailer-ribbon */
+  left: 55%;                 /* Adjusted slightly to the right of the trailer ribbon */
+  transform: translateX(-50%);
+  width: 61px;
+  height: 63px;
+  cursor: pointer;
+  z-index: 4; /* Layer 4: Main core elements */
 }
 
 /* Layer 5: Social Media and Action Buttons (Aligned with Top Bar) */
@@ -168,7 +179,7 @@
 .applestore-btn {
   position: absolute;
   top: 8px;
-  z-index: 5;
+  z-index: 5; /* Layer 5: Social media buttons and action buttons aligned with the black top bar */
   cursor: pointer;
   transition: all 0.3s ease; /* Smooth transition for state change */
 }
@@ -259,20 +270,4 @@
   left: calc(811px - 160px / 2);
   width: 160px;
   height: 51px;
-}
-
-/* Play Trailer Button (Normal and Pressed) */
-.play-trailer-normal,
-.play-trailer-pressed {
-  position: absolute;
-  top: calc(799.5px - 63px / 2);
-  left: calc(503.5px - 61px / 2);
-  width: 61px;
-  height: 63px;
-  cursor: pointer;
-  z-index: 4; /* Layer 4: Main core elements */
-}
-.play-trailer-pressed {
-  width: 58px;
-  height: 58px;
 }
