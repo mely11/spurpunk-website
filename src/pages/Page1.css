@@ -95,13 +95,15 @@
   height: 160px;
 }
 
+/* Compass Icon */
 .compass-icon {
-  top: 400px; /* Reference height */
+  top: 50vh; /* Start at the same height as the yellowish background color */
   left: 210px;
   width: 200px;
   height: 200px;
 }
 
+/* Map Grass Icon */
 .map-grass-icon {
   top: 671px;
   left: 200px;
@@ -147,7 +149,7 @@
 /* Page 1 Landmass Layer */
 .page1-landmass {
   position: absolute;
-  top: 400px; /* Same as compass-icon */
+  top: 50vh;
   left: 0;
   width: 100%;
   height: auto;
@@ -166,7 +168,7 @@
 .applestore-btn {
   position: absolute;
   top: 8px;
-  z-index: 5; /* Layer 5: Social media buttons and action buttons aligned with the black top bar */
+  z-index: 5;
   cursor: pointer;
   transition: all 0.3s ease; /* Smooth transition for state change */
 }
