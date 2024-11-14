@@ -98,6 +98,17 @@ const Page1 = () => {
         />
       </a>
 
+      {/* Play Trailer Button */}
+      <motion.img
+        src={playTrailerPressed ? PlayTrailerPressed : PlayTrailerNormal}
+        alt="Play Trailer"
+        className="play-trailer-normal"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.375, ease: 'easeOut' }}
+        onClick={() => handlePress(setPlayTrailerPressed, 200)}
+      />
+
       {/* Are You a Spurpunk (Pink) */}
       <motion.img
         src={AreYouSpurpunk}
@@ -173,17 +184,6 @@ const Page1 = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-      />
-
-      {/* Play Trailer Button */}
-      <motion.img
-        src={playTrailerPressed ? PlayTrailerPressed : PlayTrailerNormal}
-        alt="Play Trailer"
-        className="play-trailer-normal"
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.25, ease: 'easeOut' }}
-        onClick={() => handlePress(setPlayTrailerPressed, 200)}
       />
 
       {/* Buy Now Buttons for iOS and Android */}
