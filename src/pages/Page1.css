@@ -6,6 +6,17 @@
   background-color: #df9542;
 }
 
+/* Black Background for Top Section */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #000;
+  z-index: 5;
+}
+
 /* Background Video */
 .background-video {
   position: absolute;
@@ -14,33 +25,58 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+<<<<<<< HEAD
    /* Keep the video at the very back */
+=======
+  z-index: 1;
+>>>>>>> main
 }
 
 /* Background Color (Above Video, Below Elements) */
 .background-color {
   position: absolute;
-  top: 50vh; /* Start from the middle to the bottom */
+  top: 50vh;
   left: 0;
   width: 100%;
+<<<<<<< HEAD
   height: 100%; /* Cover the lower half of the viewport */
   background-color: #df9542;
   z-index: 1; /* Place it above the video, below the rest */
+=======
+  height: 50vh;
+  background-color: #df9542;
+  z-index: 2;
+>>>>>>> main
 }
 
-/* Spurpunk Title (Red) */
-.spurpunk-title {
+/* Core Elements */
+.spurpunk-title,
+.skeleton-frame,
+.trailer-ribbon,
+.are-you-spurpunk,
+.map-cactus2,
+.compass-icon,
+.map-grass-icon,
+.map-grass-icon-duplicate,
+.map-cactus-icon,
+.page1-dotted-line,
+.arrow-down,
+.page1-landmass,
+.play-trailer-normal {
   position: absolute;
-  top: calc(199.5px - 175px / 2);   
-  left: calc(50% - 536px / 2);      
+  z-index: 4;
+}
+
+/* Specific Elements */
+.spurpunk-title {
+  top: calc(199.5px - 175px / 2);
+  left: calc(50% - 536px / 2);
   width: 536px;
   height: 175px;
   z-index: 2;
 }
 
-/* Skeleton Frame (Blue) */
 .skeleton-frame {
-  position: absolute;
   top: 300px;
   left: 41%;
   transform: translateX(-50%);
@@ -49,22 +85,18 @@
   z-index: 2;
 }
 
-/* Trailer Ribbon (Green) */
 .trailer-ribbon {
-  position: absolute;
-  top: calc(300px + 185px);  /* Positioned right below the skeleton frame */
+  top: calc(300px + 185px);
   left: 39%;
   transform: translateX(-50%);
-  width: auto;  /* Dynamic width */
-  max-width: 70vw;  /* Restrict to 70% of viewport */
+  width: auto;
+  max-width: 70vw;
   height: auto;
   z-index: 2;
 }
 
-/* Text under Trailer Ribbon (Pink) */
 .are-you-spurpunk {
-  position: absolute;
-  top: calc(300px + 280px + 65px);  /* Placed under the trailer ribbon */
+  top: calc(300px + 280px + 65px);
   left: 28%;
   transform: translateX(-50%);
   font-size: 2.5rem;
@@ -73,29 +105,27 @@
   z-index: 2;
 }
 
-/* Map Cactus2 Icon */
 .map-cactus2 {
-  position: absolute;
   top: 300px;
   left: 40px;
   width: 159px;
   height: 160px;
+<<<<<<< HEAD
   z-index: 2;
+=======
+  z-index: 6;  /* Above dotted line */
+>>>>>>> main
 }
 
-/* Compass Icon */
 .compass-icon {
-  position: absolute;
-  top: 400px;
+  top: 50vh;
   left: 210px;
   width: 200px;
   height: 200px;
   z-index: 1;
 }
 
-/* Map Grass Icon */
 .map-grass-icon {
-  position: absolute;
   top: 671px;
   left: 200px;
   width: 53px;
@@ -103,9 +133,7 @@
   z-index: 2;
 }
 
-/* Duplicate Map Grass Icon */
 .map-grass-icon-duplicate {
-  position: absolute;
   top: 500px;
   left: 900px;
   width: 53px;
@@ -113,23 +141,24 @@
   z-index: 1;
 }
 
-/* Map Cactus Icon */
 .map-cactus-icon {
-  position: absolute;
   top: 300px;
   left: 1017.5px;
   width: 153px;
   height: 136px;
+<<<<<<< HEAD
   z-index: 2;
+=======
+  z-index: 6;  /* Above dotted line */
+>>>>>>> main
 }
 
-/* Page 1 Dotted Line */
 .page1-dotted-line {
-  position: absolute;
   top: calc(784px - 750px / 2);
   left: calc(50% - 1000px / 2);
   width: 882px;
   height: 380px;
+<<<<<<< HEAD
   z-index: 1;
 }
 
@@ -144,8 +173,11 @@
 }
 
 /* Arrow Down */
+=======
+}
+
+>>>>>>> main
 .arrow-down {
-  position: absolute;
   top: calc(868px - 500px / 2);
   left: calc(50% + (1009px - 1220px / 2));
   width: 92px;
@@ -153,120 +185,81 @@
   z-index: 2;
 }
 
-/* Discord Button */
-.discord-normal {
-  position: absolute;
-  top: calc(37px - 58px / 2);
-  left: calc(50% + (547px - 545px));
-  width: 58px;
-  height: 58px;
-}
-.discord-pressed {
-  position: absolute;
-  top: calc(38.5px - 55px / 2);
-  left: calc(50% + (547px - 545px));
-  width: 56px;
-  height: 55px;
+/* Page 1 Landmass Layer */
+.page1-landmass {
+  top: 50vh;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 3;  /* Below core elements */
 }
 
-/* Instagram Button */
-.instagram-normal {
-  position: absolute;
-  top: calc(41.5px - 59px / 2);
-  left: calc(50% + (478px - 545px));
-  width: 58px;
-  height: 59px;
-}
-.instagram-pressed {
-  position: absolute;
-  top: calc(41.5px - 55px / 2);
-  left: calc(50% + (478.5px - 545px));
-  width: 55px;
-  height: 55px;
+/* Play Trailer Button */
+.play-trailer-normal {
+  top: calc(300px + 252px);
+  left: 44.3%;
+  transform: translateX(-50%);
+  width: 61px;
+  height: 63px;
+  cursor: pointer;
+  z-index: 5;  /* Above the rest of the core elements */
 }
 
-/* YouTube Button */
-.youtube-normal {
+/* Social Media Buttons */
+.discord-normal,
+.instagram-normal,
+.youtube-normal,
+.x-normal,
+.facebook-normal,
+.presskit-button,
+.buy-now,
+.googleplay-btn,
+.applestore-btn {
   position: absolute;
-  top: calc(42.5px - 59px / 2);
-  left: calc(50% + (406.5px - 545px));
-  width: 57px;
-  height: 59px;
-}
-.youtube-pressed {
-  position: absolute;
-  top: calc(42.5px - 55px / 2);
-  left: calc(50% + (406px - 545px));
-  width: 54px;
-  height: 55px;
-}
-
-/* X Button */
-.x-normal {
-  position: absolute;
-  top: calc(42.5px - 59px / 2);
-  left: calc(50% + (335.5px - 545px));
-  width: 57px;
-  height: 59px;
-}
-.x-pressed {
-  position: absolute;
-  top: calc(42.5px - 55px / 2);
-  left: calc(50% + (335px - 545px));
-  width: 54px;
-  height: 55px;
+  top: 8px;
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* Facebook Button */
-.facebook-normal {
-  position: absolute;
-  top: calc(42.5px - 59px / 2);
-  left: calc(50% + (265.5px - 545px));
-  width: 57px;
-  height: 59px;
-}
-.facebook-pressed {
-  position: absolute;
-  top: calc(42.5px - 55px / 2);
-  left: calc(50% + (265px - 545px));
-  width: 54px;
-  height: 55px;
-}
+/* Specific Social Media Button Positions */
+.discord-normal { left: 510px; }
+.instagram-normal { left: 440px; }
+.youtube-normal { left: 370px; }
+.x-normal { left: 300px; }
+.facebook-normal { left: 230px; }
 
 /* PressKit Button */
 .presskit-button {
-  position: absolute;
-  top: calc(39.5px - 51px / 2);
-  left: calc(50% + (107px - 545px));
+  top: calc(39.5px - 60px / 2);
+  left: calc(107px - 160px / 2);
   width: 160px;
   height: 51px;
 }
 
 /* Buy Now Button */
 .buy-now {
-  position: absolute;
   top: calc(36.5px - 29px / 2);
-  left: calc(50% + (654.5px - 545px));
+  left: calc(654.5px - 89px / 2);
   width: 89px;
   height: 29px;
 }
 
 /* GooglePlay Button */
 .googleplay-btn {
-  position: absolute;
-  top: calc(39.5px - 51px / 2);
-  left: calc(50% + (992px - 545px));
+  top: calc(39.5px - 60px / 2);
+  left: calc(992px - 160px / 2);
   width: 160px;
   height: 51px;
 }
 
 /* AppleStore Button */
 .applestore-btn {
-  position: absolute;
-  top: calc(39.5px - 51px / 2);
-  left: calc(50% + (811px - 545px));
+  top: calc(39.5px - 60px / 2);
+  left: calc(811px - 160px / 2);
   width: 160px;
   height: 51px;
+<<<<<<< HEAD
 }
 
 /* Play Trailer Button (Normal) */
@@ -425,3 +418,6 @@
   }
 }
 
+=======
+}
+>>>>>>> main
