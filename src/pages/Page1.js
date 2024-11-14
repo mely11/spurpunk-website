@@ -48,6 +48,9 @@ const Page1 = () => {
 
   return (
     <div className="page1">
+      {/* Black Background for Top Section */}
+      <div className="top-bar"></div>
+
       {/* Background Video */}
       <motion.video
         src={GameplayVideo}
