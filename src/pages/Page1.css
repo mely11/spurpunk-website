@@ -13,7 +13,7 @@
   width: 100%;
   height: 70px; /* Covers all the buttons */
   background-color: #000; /* Black color to match the mockup */
-  z-index: 100; /* Ensure it's above everything else */
+  z-index: 5; /* Layer 5: Above everything else */
 }
 
 /* Background Video */
@@ -24,7 +24,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -3; /* Ensure it stays behind all other elements */
+  z-index: 1; /* Layer 1: Background video */
 }
 
 /* Background Color (Above Video, Below Elements) */
@@ -35,263 +35,242 @@
   width: 100%;
   height: 50vh;
   background-color: #df9542;
-  z-index: -2; /* Stays above the video but below other components */
+  z-index: 2; /* Layer 2: Background color */
 }
 
-/* Spurpunk Title */
-.spurpunk-title {
+/* Layer 3: Core Components */
+.spurpunk-title,
+.skeleton-frame,
+.trailer-ribbon,
+.are-you-spurpunk,
+.map-cactus2,
+.compass-icon,
+.map-grass-icon,
+.map-grass-icon-duplicate,
+.map-cactus-icon,
+.page1-dotted-line,
+.play-trailer-arrow,
+.arrow-down {
   position: absolute;
+  z-index: 4; /* Layer 4: Main core elements */
+}
+
+.spurpunk-title {
   top: calc(199.5px - 175px / 2);   
   left: calc(50% - 536px / 2);      
   width: 536px;
   height: 175px;
-  z-index: 15; /* Above the black top-bar */
 }
 
-/* Skeleton Frame */
 .skeleton-frame {
-  position: absolute;
   top: 300px;
   left: 41%;
   transform: translateX(-50%);
   width: 280px;
   height: auto;
-  z-index: 15; /* Above black top-bar */
 }
 
-/* Trailer Ribbon */
 .trailer-ribbon {
-  position: absolute;
   top: calc(300px + 185px);  
   left: 39%;
   transform: translateX(-50%);
   width: auto;
   max-width: 70vw;
   height: auto;
-  z-index: 15; /* Above black top-bar */
 }
 
-/* Are You a Spurpunk Text */
 .are-you-spurpunk {
-  position: absolute;
   top: calc(300px + 280px + 65px);
   left: 28%;
   transform: translateX(-50%);
   font-size: 2.5rem;
   text-align: center;
   color: #fff;
-  z-index: 15; /* Above black top-bar */
 }
 
-/* Map Cactus2 Icon */
 .map-cactus2 {
-  position: absolute;
   top: 300px;
   left: 40px;
   width: 159px;
   height: 160px;
-  z-index: 15; /* Above black top-bar */
 }
 
-/* Compass Icon */
 .compass-icon {
-  position: absolute;
-  top: 400px;
+  top: 400px; /* Reference height */
   left: 210px;
   width: 200px;
   height: 200px;
-  z-index: 15; /* Above black top-bar */
 }
 
-/* Map Grass Icon */
 .map-grass-icon {
-  position: absolute;
   top: 671px;
   left: 200px;
   width: 53px;
   height: 94px;
-  z-index: 15; /* Above black top-bar */
 }
 
-/* Duplicate Map Grass Icon */
 .map-grass-icon-duplicate {
-  position: absolute;
   top: 500px;
   left: 900px;
   width: 53px;
   height: 94px;
-  z-index: 15; /* Above black top-bar */
 }
 
-/* Map Cactus Icon */
 .map-cactus-icon {
-  position: absolute;
   top: 300px;
   left: 1017.5px;
   width: 153px;
   height: 136px;
-  z-index: 15; /* Above black top-bar */
 }
 
-/* Page 1 Dotted Line */
 .page1-dotted-line {
-  position: absolute;
   top: calc(784px - 750px / 2);
   left: calc(50% - 1000px / 2);
   width: 882px;
   height: 380px;
-  z-index: 15; /* Above black top-bar */
 }
 
-/* Play Trailer Arrow */
 .play-trailer-arrow {
-  position: absolute;
   top: calc(797.5px - 505px / 2); 
   left: calc(50% - 120px / 2);
   width: 60px;
   height: 63px;
-  z-index: 15; /* Above black top-bar */
 }
 
-/* Arrow Down */
 .arrow-down {
-  position: absolute;
   top: calc(868px - 500px / 2);
   left: calc(50% + (1009px - 1220px / 2));
   width: 92px;
   height: 88px;
-  z-index: 15; /* Above black top-bar */
 }
 
-/* Social Media Button Styling (Normal and Pressed) */
+/* Page 1 Landmass Layer */
+.page1-landmass {
+  position: absolute;
+  top: 400px; /* Same as compass-icon */
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 3; /* Layer 3: Beneath core components */
+}
+
+/* Layer 5: Social Media and Action Buttons (Aligned with Top Bar) */
 .discord-normal, .discord-pressed,
 .instagram-normal, .instagram-pressed,
 .youtube-normal, .youtube-pressed,
 .x-normal, .x-pressed,
-.facebook-normal, .facebook-pressed {
+.facebook-normal, .facebook-pressed,
+.presskit-button,
+.buy-now,
+.googleplay-btn,
+.applestore-btn {
   position: absolute;
-  top: 20px; /* Aligned with black top bar */
-  z-index: 120; /* Ensure they're above the black top bar */
+  top: 8px;
+  z-index: 5; /* Layer 5: Social media buttons and action buttons aligned with the black top bar */
   cursor: pointer;
   transition: all 0.3s ease; /* Smooth transition for state change */
 }
 
 /* Specific Social Media Button Positions */
 .discord-normal {
-  left: 547px;
+  left: 510px;
   width: 58px;
   height: 58px;
 }
 .discord-pressed {
-  left: 547px;
+  left: 510px;
   width: 56px;
   height: 55px;
 }
 
 .instagram-normal {
-  left: 478px;
+  left: 440px;
   width: 58px;
   height: 59px;
 }
 .instagram-pressed {
-  left: 478.5px;
+  left: 440px;
   width: 55px;
   height: 55px;
 }
 
 .youtube-normal {
-  left: 406.5px;
+  left: 370px;
   width: 57px;
   height: 59px;
 }
 .youtube-pressed {
-  left: 406px;
+  left: 370px;
   width: 54px;
   height: 55px;
 }
 
 .x-normal {
-  left: 335.5px;
+  left: 300px;
   width: 57px;
   height: 59px;
 }
 .x-pressed {
-  left: 335px;
+  left: 300px;
   width: 54px;
   height: 55px;
 }
 
 .facebook-normal {
-  left: 265.5px;
+  left: 230px;
   width: 57px;
   height: 59px;
 }
 .facebook-pressed {
-  left: 265px;
+  left: 230px;
   width: 54px;
   height: 55px;
 }
 
 /* PressKit Button */
 .presskit-button {
-  position: absolute;
-  top: calc(39.5px - 51px / 2);
+  top: calc(39.5px - 60px / 2);
   left: calc(107px - 160px / 2);
   width: 160px;
   height: 51px;
-  cursor: pointer;
-  z-index: 120; /* Above the black top bar */
 }
 
 /* Buy Now Button */
 .buy-now {
-  position: absolute;
   top: calc(36.5px - 29px / 2);
   left: calc(654.5px - 89px / 2);
   width: 89px;
   height: 29px;
-  cursor: pointer;
-  z-index: 120; /* Above the black top bar */
 }
 
 /* GooglePlay Button */
 .googleplay-btn {
-  position: absolute;
   top: calc(39.5px - 51px / 2);
   left: calc(992px - 160px / 2);
   width: 160px;
   height: 51px;
-  cursor: pointer;
-  z-index: 120; /* Above the black top bar */
 }
 
 /* AppleStore Button */
 .applestore-btn {
-  position: absolute;
   top: calc(39.5px - 51px / 2);
   left: calc(811px - 160px / 2);
   width: 160px;
   height: 51px;
-  cursor: pointer;
-  z-index: 120; /* Above the black top bar */
 }
 
 /* Play Trailer Button (Normal and Pressed) */
-.play-trailer-normal {
+.play-trailer-normal,
+.play-trailer-pressed {
   position: absolute;
   top: calc(799.5px - 63px / 2);
   left: calc(503.5px - 61px / 2);
   width: 61px;
   height: 63px;
   cursor: pointer;
-  z-index: 15; /* Above black top-bar */
+  z-index: 4; /* Layer 4: Main core elements */
 }
 .play-trailer-pressed {
-  position: absolute;
-  top: calc(800px - 58px / 2);
-  left: calc(504px - 58px / 2);
   width: 58px;
   height: 58px;
-  cursor: pointer;
-  z-index: 15; /* Above black top-bar */
 }
