@@ -179,14 +179,14 @@ const Page1 = () => {
       <motion.img
         src={playTrailerPressed ? PlayTrailerPressed : PlayTrailerNormal}
         alt="Play Trailer"
-        className="play-trailer-button"
+        className="play-trailer-normal"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.25, ease: 'easeOut' }}
         onClick={() => handlePress(setPlayTrailerPressed, 200)}
       />
 
-      {/* New Buy Now Buttons for iOS and Android */}
+      {/* Buy Now Buttons for iOS and Android */}
       <a href="https://play.google.com/store/apps/details?id=com.easleydunnproductions.spurpunk&hl=en_US&gl=US" target="_blank" rel="noopener noreferrer">
         <motion.img
           src={GooglePlayBtn}
@@ -208,7 +208,7 @@ const Page1 = () => {
         />
       </a>
 
-      {/* New Landmass Section for the Background */}
+      {/* Landmass Section for the Background */}
       <motion.img
         src={Page1Landmass}
         alt="Page 1 Landmass"
