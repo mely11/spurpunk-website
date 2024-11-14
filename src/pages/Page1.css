@@ -276,3 +276,22 @@
   width: 58px;
   height: 58px;
 }
+
+/* Social Media Button Styles */
+.discord-normal, .discord-pressed,
+.instagram-normal, .instagram-pressed,
+.youtube-normal, .youtube-pressed,
+.x-normal, .x-pressed,
+.facebook-normal, .facebook-pressed {
+  transition: all 0.3s ease; /* Smooth transition */
+  cursor: pointer;
+}
+
+/* Social Media Button Pressed Effect */
+.discord-pressed,
+.instagram-pressed,
+.youtube-pressed,
+.x-pressed,
+.facebook-pressed {
+  transform: scale(0.95); /* Slightly scale down the icon */
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './Page1.css';
 
@@ -28,6 +28,17 @@ import PlayTrailerArrow from '../assets/images/Play-Trailer-Arrow@.png';
 import GameplayVideo from '../assets/videos/Gameplay_BurialGrounds_Clips_Better.mp4';
 
 const Page1 = () => {
+  const [discordPressed, setDiscordPressed] = useState(false);
+  const [instagramPressed, setInstagramPressed] = useState(false);
+  const [youtubePressed, setYoutubePressed] = useState(false);
+  const [xPressed, setXPressed] = useState(false);
+  const [facebookPressed, setFacebookPressed] = useState(false);
+
+  const handlePress = (setPressed, timeout) => {
+    setPressed(true);
+    setTimeout(() => setPressed(false), timeout);
+  };
+
   return (
     <div className="page1">
       {/* Background Video */}
@@ -89,44 +100,49 @@ const Page1 = () => {
 
       {/* Social Media Links */}
       <motion.img
-        src={DiscordNormal}
-        alt="Discord Normal"
+        src={discordPressed ? DiscordPressed : DiscordNormal}
+        alt="Discord"
         className="discord-normal"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.25, ease: 'easeOut' }}
+        onClick={() => handlePress(setDiscordPressed, 200)}
       />
       <motion.img
-        src={InstagramNormal}
-        alt="Instagram Normal"
+        src={instagramPressed ? InstagramPressed : InstagramNormal}
+        alt="Instagram"
         className="instagram-normal"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.25, ease: 'easeOut' }}
+        onClick={() => handlePress(setInstagramPressed, 200)}
       />
       <motion.img
-        src={YoutubeNormal}
-        alt="Youtube Normal"
+        src={youtubePressed ? YoutubePressed : YoutubeNormal}
+        alt="Youtube"
         className="youtube-normal"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.25, ease: 'easeOut' }}
+        onClick={() => handlePress(setYoutubePressed, 200)}
       />
       <motion.img
-        src={XNormal}
-        alt="X Normal"
+        src={xPressed ? XPressed : XNormal}
+        alt="X"
         className="x-normal"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.25, ease: 'easeOut' }}
+        onClick={() => handlePress(setXPressed, 200)}
       />
       <motion.img
-        src={FacebookNormal}
-        alt="Facebook Normal"
+        src={facebookPressed ? FacebookPressed : FacebookNormal}
+        alt="Facebook"
         className="facebook-normal"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.25, ease: 'easeOut' }}
+        onClick={() => handlePress(setFacebookPressed, 200)}
       />
 
       {/* Map Cactus2 Icon */}
