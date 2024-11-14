@@ -175,7 +175,7 @@ const Page1 = () => {
         transition={{ duration: 0.5, ease: 'easeOut' }}
       />
 
-      {/* Play Trailer Button (Updated with new Normal and Pressed versions) */}
+      {/* Play Trailer Button */}
       <motion.img
         src={playTrailerPressed ? PlayTrailerPressed : PlayTrailerNormal}
         alt="Play Trailer"
@@ -183,7 +183,7 @@ const Page1 = () => {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.25, ease: 'easeOut' }}
-        onClick={() => handlePress(setPlayTrailerPressed, 200)}  // 200ms press effect
+        onClick={() => handlePress(setPlayTrailerPressed, 200)}
       />
 
       {/* New Buy Now Buttons for iOS and Android */}
