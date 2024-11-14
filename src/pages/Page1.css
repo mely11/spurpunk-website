@@ -5,6 +5,17 @@
   overflow: hidden;
 }
 
+/* Black Background for Top Section */
+.top-bar {
+  position: fixed; /* Fixed so it stays at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; /* Set height enough to cover the buttons */
+  background-color: #000; /* Black background color */
+  z-index: 100; /* Set high z-index to ensure visibility */
+}
+
 /* Background Video */
 .background-video {
   position: absolute;
@@ -27,16 +38,17 @@
   z-index: -2; /* Place it above the video, below the rest */
 }
 
-/* Spurpunk Title (Red) */
+/* Spurpunk Title */
 .spurpunk-title {
   position: absolute;
   top: calc(199.5px - 175px / 2);   
   left: calc(50% - 536px / 2);      
   width: 536px;
   height: 175px;
+  z-index: 15; /* Ensure it's above the black top bar */
 }
 
-/* Skeleton Frame (Blue) */
+/* Skeleton Frame */
 .skeleton-frame {
   position: absolute;
   top: 300px;
@@ -44,9 +56,10 @@
   transform: translateX(-50%);
   width: 280px;
   height: auto;
+  z-index: 15; /* Ensure it's above the black top bar */
 }
 
-/* Trailer Ribbon (Green) */
+/* Trailer Ribbon */
 .trailer-ribbon {
   position: absolute;
   top: calc(300px + 185px);  /* Positioned right below the skeleton frame */
@@ -55,9 +68,10 @@
   width: auto;  /* Dynamic width */
   max-width: 70vw;  /* Restrict to 70% of viewport */
   height: auto;
+  z-index: 15; /* Ensure it's above the black top bar */
 }
 
-/* Text under Trailer Ribbon (Pink) */
+/* Text under Trailer Ribbon */
 .are-you-spurpunk {
   position: absolute;
   top: calc(300px + 280px + 65px);  /* Placed under the trailer ribbon */
@@ -66,6 +80,7 @@
   font-size: 2.5rem;
   text-align: center;
   color: #fff;
+  z-index: 15; /* Ensure it's above the black top bar */
 }
 
 /* Map Cactus2 Icon */
@@ -75,7 +90,7 @@
   left: 40px;
   width: 159px;
   height: 160px;
-  z-index: -1;
+  z-index: 15; /* Ensure it's above the black top bar */
 }
 
 /* Compass Icon */
@@ -85,6 +100,7 @@
   left: 210px;
   width: 200px;
   height: 200px;
+  z-index: 15; /* Ensure it's above the black top bar */
 }
 
 /* Map Grass Icon */
@@ -94,6 +110,7 @@
   left: 200px;
   width: 53px;
   height: 94px;
+  z-index: 15; /* Ensure it's above the black top bar */
 }
 
 /* Duplicate Map Grass Icon */
@@ -103,6 +120,7 @@
   left: 900px;
   width: 53px;
   height: 94px;
+  z-index: 15; /* Ensure it's above the black top bar */
 }
 
 /* Map Cactus Icon */
@@ -112,7 +130,7 @@
   left: 1017.5px;
   width: 153px;
   height: 136px;
-  z-index: -1;
+  z-index: 15; /* Ensure it's above the black top bar */
 }
 
 /* Page 1 Dotted Line */
@@ -122,7 +140,7 @@
   left: calc(50% - 1000px / 2);
   width: 882px;
   height: 380px;
-  z-index: -2;
+  z-index: 15; /* Ensure it's above the black top bar */
 }
 
 /* Play Trailer Arrow */
@@ -132,6 +150,7 @@
   left: calc(50% - 120px / 2);
   width: 60px;
   height: 63px;
+  z-index: 15; /* Ensure it's above the black top bar */
 }
 
 /* Arrow Down */
@@ -141,135 +160,7 @@
   left: calc(50% + (1009px - 1220px / 2));
   width: 92px;
   height: 88px;
-}
-
-/* Social Media Button Styling Update */
-.discord-normal,
-.discord-pressed,
-.instagram-normal,
-.instagram-pressed,
-.youtube-normal,
-.youtube-pressed,
-.x-normal,
-.x-pressed,
-.facebook-normal,
-.facebook-pressed {
-  position: absolute;
-  top: 20px; /* Adjusted top positioning to align horizontally better as per mockup */
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-/* Specific Positions for Social Media */
-.discord-normal, .discord-pressed {
-  left: calc(50% + (547px - 545px)); 
-  width: 58px; height: 58px; /* Updated sizes as per provided assets */
-}
-.instagram-normal, .instagram-pressed {
-  left: calc(50% + (478px - 545px)); 
-  width: 58px; height: 59px;
-}
-.youtube-normal, .youtube-pressed {
-  left: calc(50% + (406.5px - 545px)); 
-  width: 57px; height: 59px;
-}
-.x-normal, .x-pressed {
-  left: calc(50% + (335.5px - 545px)); 
-  width: 57px; height: 59px;
-}
-.facebook-normal, .facebook-pressed {
-  left: calc(50% + (265.5px - 545px)); 
-  width: 57px; height: 59px;
-}
-
-/* Discord Button (Normal and Pressed) */
-.discord-normal {
-  position: absolute;
-  top: calc(37px - 58px / 2);  /* Centered vertically at y = 37 */
-  left: calc(547px - 58px / 2);  /* Centered horizontally at x = 547 */
-  width: 58px;
-  height: 58px;
-  cursor: pointer;
-}
-.discord-pressed {
-  position: absolute;
-  top: calc(38.5px - 55px / 2);  /* Centered vertically at y = 38.5 */
-  left: calc(547px - 56px / 2);  /* Centered horizontally at x = 547 */
-  width: 56px;
-  height: 55px;
-  cursor: pointer;
-}
-
-/* Instagram Button (Normal and Pressed) */
-.instagram-normal {
-  position: absolute;
-  top: calc(41.5px - 59px / 2);  /* Centered vertically at y = 41.5 */
-  left: calc(478px - 58px / 2);  /* Centered horizontally at x = 478 */
-  width: 58px;
-  height: 59px;
-  cursor: pointer;
-}
-.instagram-pressed {
-  position: absolute;
-  top: calc(41.5px - 55px / 2);  /* Centered vertically at y = 41.5 */
-  left: calc(478.5px - 55px / 2);  /* Centered horizontally at x = 478.5 */
-  width: 55px;
-  height: 55px;
-  cursor: pointer;
-}
-
-/* YouTube Button (Normal and Pressed) */
-.youtube-normal {
-  position: absolute;
-  top: calc(42.5px - 59px / 2);  /* Centered vertically at y = 42.5 */
-  left: calc(406.5px - 57px / 2);  /* Centered horizontally at x = 406.5 */
-  width: 57px;
-  height: 59px;
-  cursor: pointer;
-}
-.youtube-pressed {
-  position: absolute;
-  top: calc(42.5px - 55px / 2);  /* Centered vertically at y = 42.5 */
-  left: calc(406px - 54px / 2);  /* Centered horizontally at x = 406 */
-  width: 54px;
-  height: 55px;
-  cursor: pointer;
-}
-
-/* X Button (Normal and Pressed) */
-.x-normal {
-  position: absolute;
-  top: calc(42.5px - 59px / 2);  /* Centered vertically at y = 42.5 */
-  left: calc(335.5px - 57px / 2);  /* Centered horizontally at x = 335.5 */
-  width: 57px;
-  height: 59px;
-  cursor: pointer;
-}
-.x-pressed {
-  position: absolute;
-  top: calc(42.5px - 55px / 2);  /* Centered vertically at y = 42.5 */
-  left: calc(335px - 54px / 2);  /* Centered horizontally at x = 335 */
-  width: 54px;
-  height: 55px;
-  cursor: pointer;
-}
-
-/* Facebook Button (Normal and Pressed) */
-.facebook-normal {
-  position: absolute;
-  top: calc(42.5px - 59px / 2);  /* Centered vertically at y = 42.5 */
-  left: calc(265.5px - 57px / 2);  /* Centered horizontally at x = 265.5 */
-  width: 57px;
-  height: 59px;
-  cursor: pointer;
-}
-.facebook-pressed {
-  position: absolute;
-  top: calc(42.5px - 55px / 2);  /* Centered vertically at y = 42.5 */
-  left: calc(265px - 54px / 2);  /* Centered horizontally at x = 265 */
-  width: 54px;
-  height: 55px;
-  cursor: pointer;
+  z-index: 15; /* Ensure it's above the black top bar */
 }
 
 /* PressKit Button */
@@ -280,6 +171,7 @@
   width: 160px;
   height: 51px;
   cursor: pointer; /* Make button clickable */
+  z-index: 20; /* Ensure it's above the black top bar */
 }
 
 /* Buy Now Button */
@@ -290,6 +182,7 @@
   width: 89px;
   height: 29px;
   cursor: pointer; /* Make button clickable */
+  z-index: 20; /* Ensure it's above the black top bar */
 }
 
 /* GooglePlay Button */
@@ -300,6 +193,7 @@
   width: 160px;
   height: 51px;
   cursor: pointer; /* Make button clickable */
+  z-index: 20; /* Ensure it's above the black top bar */
 }
 
 /* AppleStore Button */
@@ -310,6 +204,102 @@
   width: 160px;
   height: 51px;
   cursor: pointer; /* Make button clickable */
+  z-index: 20; /* Ensure it's above the black top bar */
+}
+
+/* Social Media Buttons (Normal and Pressed) */
+.discord-normal,
+.instagram-normal,
+.youtube-normal,
+.x-normal,
+.facebook-normal,
+.discord-pressed,
+.instagram-pressed,
+.youtube-pressed,
+.x-pressed,
+.facebook-pressed {
+  z-index: 20; /* Ensure all buttons are above the black background */
+  cursor: pointer; /* Make button clickable */
+}
+
+/* Discord Button (Normal and Pressed) */
+.discord-normal {
+  position: absolute;
+  top: 20px;  /* Adjusted for the new black bar */
+  left: calc(547px - 58px / 2);  /* Centered horizontally */
+  width: 58px;
+  height: 58px;
+}
+.discord-pressed {
+  position: absolute;
+  top: 21.5px;  /* Adjusted for press effect */
+  left: calc(547px - 56px / 2);
+  width: 56px;
+  height: 55px;
+}
+
+/* Instagram Button (Normal and Pressed) */
+.instagram-normal {
+  position: absolute;
+  top: 20px;
+  left: calc(478px - 58px / 2);
+  width: 58px;
+  height: 59px;
+}
+.instagram-pressed {
+  position: absolute;
+  top: 21.5px;
+  left: calc(478.5px - 55px / 2);
+  width: 55px;
+  height: 55px;
+}
+
+/* YouTube Button (Normal and Pressed) */
+.youtube-normal {
+  position: absolute;
+  top: 20px;
+  left: calc(406.5px - 57px / 2);
+  width: 57px;
+  height: 59px;
+}
+.youtube-pressed {
+  position: absolute;
+  top: 21.5px;
+  left: calc(406px - 54px / 2);
+  width: 54px;
+  height: 55px;
+}
+
+/* X Button (Normal and Pressed) */
+.x-normal {
+  position: absolute;
+  top: 20px;
+  left: calc(335.5px - 57px / 2);
+  width: 57px;
+  height: 59px;
+}
+.x-pressed {
+  position: absolute;
+  top: 21.5px;
+  left: calc(335px - 54px / 2);
+  width: 54px;
+  height: 55px;
+}
+
+/* Facebook Button (Normal and Pressed) */
+.facebook-normal {
+  position: absolute;
+  top: 20px;
+  left: calc(265.5px - 57px / 2);
+  width: 57px;
+  height: 59px;
+}
+.facebook-pressed {
+  position: absolute;
+  top: 21.5px;
+  left: calc(265px - 54px / 2);
+  width: 54px;
+  height: 55px;
 }
 
 /* Play Trailer Button (Normal and Pressed) */
