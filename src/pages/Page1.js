@@ -23,7 +23,13 @@ import MapGrassIcon from '../assets/images/map-grass-icon@.png';
 import MapCactusIcon from '../assets/images/map-cactus-icon@.png';
 import Page1DottedLine from '../assets/images/Page1_Dotteed_Line@.png';
 import ArrowDown from '../assets/images/Arrow_Down@.png';
-import PlayTrailerArrow from '../assets/images/Play-Trailer-Arrow@.png';
+import PlayTrailerNormal from '../assets/images/PlayTrailer_normal@.png';
+import PlayTrailerPressed from '../assets/images/PlayTrailer_pressed@.png';
+import GooglePlayBtn from '../assets/images/GooglePlay_BTN@.png';
+import AppleStoreBtn from '../assets/images/AppleStore_BTN@.png';
+import Page1Landmass from '../assets/images/Page1_Landmass@.png';
+import PressKitButton from '../assets/images/PressKit_Button@.png';
+import BuyNowButton from '../assets/images/Buy-Now@.png';
 // Importing video
 import GameplayVideo from '../assets/videos/Gameplay_BurialGrounds_Clips_Better.mp4';
 
@@ -33,6 +39,7 @@ const Page1 = () => {
   const [youtubePressed, setYoutubePressed] = useState(false);
   const [xPressed, setXPressed] = useState(false);
   const [facebookPressed, setFacebookPressed] = useState(false);
+  const [playTrailerPressed, setPlayTrailerPressed] = useState(false);
 
   const handlePress = (setPressed, timeout) => {
     setPressed(true);
@@ -145,6 +152,69 @@ const Page1 = () => {
         onClick={() => handlePress(setFacebookPressed, 200)}
       />
 
+      {/* PressKit Button */}
+      <motion.img
+        src={PressKitButton}
+        alt="Press Kit"
+        className="presskit-button"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+      />
+
+      {/* Buy Now Button */}
+      <motion.img
+        src={BuyNowButton}
+        alt="Buy Now"
+        className="buy-now"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+      />
+
+      {/* Play Trailer Button (Updated with new Normal and Pressed versions) */}
+      <motion.img
+        src={playTrailerPressed ? PlayTrailerPressed : PlayTrailerNormal}
+        alt="Play Trailer"
+        className="play-trailer-button"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.25, ease: 'easeOut' }}
+        onClick={() => handlePress(setPlayTrailerPressed, 200)}  // 200ms press effect
+      />
+
+      {/* New Buy Now Buttons for iOS and Android */}
+      <a href="https://play.google.com/store/apps/details?id=com.easleydunnproductions.spurpunk&hl=en_US&gl=US" target="_blank" rel="noopener noreferrer">
+        <motion.img
+          src={GooglePlayBtn}
+          alt="Google Play Store"
+          className="googleplay-btn"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.25, ease: 'easeOut' }}
+        />
+      </a>
+      <a href="https://apps.apple.com/ge/app/spurpunk-td/id1487386202#?platform=iphone" target="_blank" rel="noopener noreferrer">
+        <motion.img
+          src={AppleStoreBtn}
+          alt="Apple App Store"
+          className="applestore-btn"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.25, ease: 'easeOut' }}
+        />
+      </a>
+
+      {/* New Landmass Section for the Background */}
+      <motion.img
+        src={Page1Landmass}
+        alt="Page 1 Landmass"
+        className="page1-landmass"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.75, duration: 0.375, ease: 'easeOut' }}
+      />
+
       {/* Map Cactus2 Icon */}
       <motion.img
         src={MapCactus2Icon}
@@ -203,16 +273,6 @@ const Page1 = () => {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-      />
-
-      {/* Play Trailer Arrow */}
-      <motion.img
-        src={PlayTrailerArrow}
-        alt="Play Trailer Arrow"
-        className="play-trailer-arrow"
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.375, ease: 'easeOut' }}
       />
 
       {/* Arrow Down */}

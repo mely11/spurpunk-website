@@ -143,102 +143,63 @@
   height: 88px;
 }
 
-/* Discord Button */
-.discord-normal {
-  position: absolute;
-  top: calc(37px - 58px / 2);
-  left: calc(50% + (547px - 545px));
-  width: 58px;
-  height: 58px;
-}
-.discord-pressed {
-  position: absolute;
-  top: calc(38.5px - 55px / 2);
-  left: calc(50% + (547px - 545px));
-  width: 56px;
-  height: 55px;
-}
-
-/* Instagram Button */
-.instagram-normal {
-  position: absolute;
-  top: calc(41.5px - 59px / 2);
-  left: calc(50% + (478px - 545px));
-  width: 58px;
-  height: 59px;
-}
-.instagram-pressed {
-  position: absolute;
-  top: calc(41.5px - 55px / 2);
-  left: calc(50% + (478.5px - 545px));
-  width: 55px;
-  height: 55px;
-}
-
-/* YouTube Button */
-.youtube-normal {
-  position: absolute;
-  top: calc(42.5px - 59px / 2);
-  left: calc(50% + (406.5px - 545px));
-  width: 57px;
-  height: 59px;
-}
-.youtube-pressed {
-  position: absolute;
-  top: calc(42.5px - 55px / 2);
-  left: calc(50% + (406px - 545px));
-  width: 54px;
-  height: 55px;
-}
-
-/* X Button */
-.x-normal {
-  position: absolute;
-  top: calc(42.5px - 59px / 2);
-  left: calc(50% + (335.5px - 545px));
-  width: 57px;
-  height: 59px;
-}
-.x-pressed {
-  position: absolute;
-  top: calc(42.5px - 55px / 2);
-  left: calc(50% + (335px - 545px));
-  width: 54px;
-  height: 55px;
-}
-
-/* Facebook Button */
-.facebook-normal {
-  position: absolute;
-  top: calc(42.5px - 59px / 2);
-  left: calc(50% + (265.5px - 545px));
-  width: 57px;
-  height: 59px;
-}
+/* Social Media Button Styling Update */
+.discord-normal,
+.discord-pressed,
+.instagram-normal,
+.instagram-pressed,
+.youtube-normal,
+.youtube-pressed,
+.x-normal,
+.x-pressed,
+.facebook-normal,
 .facebook-pressed {
   position: absolute;
-  top: calc(42.5px - 55px / 2);
-  left: calc(50% + (265px - 545px));
-  width: 54px;
-  height: 55px;
+  top: 20px; /* Adjusted top positioning to align horizontally better as per mockup */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Specific Positions for Social Media */
+.discord-normal, .discord-pressed {
+  left: calc(50% + (547px - 545px)); 
+  width: 58px; height: 58px; /* Updated sizes as per provided assets */
+}
+.instagram-normal, .instagram-pressed {
+  left: calc(50% + (478px - 545px)); 
+  width: 58px; height: 59px;
+}
+.youtube-normal, .youtube-pressed {
+  left: calc(50% + (406.5px - 545px)); 
+  width: 57px; height: 59px;
+}
+.x-normal, .x-pressed {
+  left: calc(50% + (335.5px - 545px)); 
+  width: 57px; height: 59px;
+}
+.facebook-normal, .facebook-pressed {
+  left: calc(50% + (265.5px - 545px)); 
+  width: 57px; height: 59px;
 }
 
 /* PressKit Button */
 .presskit-button {
   position: absolute;
-  top: calc(39.5px - 51px / 2);
-  left: calc(50% + (107px - 545px));
+  top: calc(39.5px - 51px / 2);  /* Center vertically at y = 39.5 */
+  left: calc(107px - 160px / 2);  /* Center horizontally at x = 107 */
   width: 160px;
   height: 51px;
+  cursor: pointer; /* Make button clickable */
 }
 
 /* Buy Now Button */
 .buy-now {
   position: absolute;
-  top: calc(36.5px - 29px / 2);
-  left: calc(50% + (654.5px - 545px));
+  top: calc(36.5px - 29px / 2);  /* Center vertically at y = 36.5 */
+  left: calc(654.5px - 89px / 2);  /* Center horizontally at x = 654.5 */
   width: 89px;
   height: 29px;
+  cursor: pointer; /* Make button clickable */
 }
 
 /* GooglePlay Button */
@@ -259,7 +220,7 @@
   height: 51px;
 }
 
-/* Play Trailer Button (Normal) */
+/* Play Trailer Button (Normal and Pressed) */
 .play-trailer-normal {
   position: absolute;
   top: calc(799.5px - 63px / 2);
@@ -267,8 +228,6 @@
   width: 61px;
   height: 63px;
 }
-
-/* Play Trailer Button (Pressed) */
 .play-trailer-pressed {
   position: absolute;
   top: calc(800px - 58px / 2);
@@ -277,21 +236,20 @@
   height: 58px;
 }
 
-/* Social Media Button Styles */
-.discord-normal, .discord-pressed,
-.instagram-normal, .instagram-pressed,
-.youtube-normal, .youtube-pressed,
-.x-normal, .x-pressed,
-.facebook-normal, .facebook-pressed {
-  transition: all 0.3s ease; /* Smooth transition */
-  cursor: pointer;
-}
-
-/* Social Media Button Pressed Effect */
+/* Added Press Interaction */
 .discord-pressed,
 .instagram-pressed,
 .youtube-pressed,
 .x-pressed,
 .facebook-pressed {
-  transform: scale(0.95); /* Slightly scale down the icon */
+  transform: scale(0.95); /* Scale down to indicate pressed state */
+}
+
+/* Smooth Transitions for Buttons */
+.discord-normal, .discord-pressed,
+.instagram-normal, .instagram-pressed,
+.youtube-normal, .youtube-pressed,
+.x-normal, .x-pressed,
+.facebook-normal, .facebook-pressed {
+  transition: all 0.3s ease; /* Smooth transition for state change */
 }
