@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/spurpunk-website/static/css/main.0f901950.css",
-    "main.js": "/spurpunk-website/static/js/main.85d4228b.js",
+    "main.css": "/spurpunk-website/static/css/main.ab270aa1.css",
+    "main.js": "/spurpunk-website/static/js/main.5af5f313.js",
     "static/js/453.a385e91d.chunk.js": "/spurpunk-website/static/js/453.a385e91d.chunk.js",
     "static/media/Gameplay_BurialGrounds_Clips_Better.mp4": "/spurpunk-website/static/media/Gameplay_BurialGrounds_Clips_Better.68d1801557ec1b2a7216.mp4",
+    "static/media/Page1_Landmass@.png": "/spurpunk-website/static/media/Page1_Landmass@.3b60d3dab418d4cc92bb.png",
     "static/media/Page1_Dotteed_Line@.png": "/spurpunk-website/static/media/Page1_Dotteed_Line@.200762cc633b140d6caf.png",
     "static/media/Skeleton-Frame@.png": "/spurpunk-website/static/media/Skeleton-Frame@.d28b5b9b17ce95c2885f.png",
     "static/media/Spurpunk-Title@.png": "/spurpunk-website/static/media/Spurpunk-Title@.b977127037c05a3fdcee.png",
@@ -14,12 +15,12 @@
     "static/media/Arrow_Down@.png": "/spurpunk-website/static/media/Arrow_Down@.c8ba24015a1d78b780ba.png",
     "static/media/Are-You-a-Spurpunk@.png": "/spurpunk-website/static/media/Are-You-a-Spurpunk@.bab1275e421a6f76618f.png",
     "index.html": "/spurpunk-website/index.html",
-    "main.0f901950.css.map": "/spurpunk-website/static/css/main.0f901950.css.map",
-    "main.85d4228b.js.map": "/spurpunk-website/static/js/main.85d4228b.js.map",
+    "main.ab270aa1.css.map": "/spurpunk-website/static/css/main.ab270aa1.css.map",
+    "main.5af5f313.js.map": "/spurpunk-website/static/js/main.5af5f313.js.map",
     "453.a385e91d.chunk.js.map": "/spurpunk-website/static/js/453.a385e91d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f901950.css",
-    "static/js/main.85d4228b.js"
+    "static/css/main.ab270aa1.css",
+    "static/js/main.5af5f313.js"
   ]
 }
