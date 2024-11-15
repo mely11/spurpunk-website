@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import './Page1.css';
 
@@ -52,18 +52,27 @@ import PhilBomb from '../assets/images/Page2_Phils_Bomb@.png'
 import MickeySkullSilhouette from '../assets/images/Page2_Mickeys_Skull_silhouette@.png'
 import MickeySkull from '../assets/images/Page2_Mickeys_Skull@.png'
 
-
 const Page1 = () => {
-  const [discordPressed, setDiscordPressed] = useState(false);
-  const [instagramPressed, setInstagramPressed] = useState(false);
-  const [youtubePressed, setYoutubePressed] = useState(false);
-  const [xPressed, setXPressed] = useState(false);
-  const [facebookPressed, setFacebookPressed] = useState(false);
-  const [playTrailerPressed, setPlayTrailerPressed] = useState(false);
+  const [pressedStates, setPressedStates] = useState({
+    discord: false,
+    instagram: false,
+    youtube: false,
+    x: false,
+    facebook: false,
+    playTrailer: false,
+  });
 
-  const handlePress = (setPressed, timeout) => {
-    setPressed(true);
-    setTimeout(() => setPressed(false), timeout);
+  const handlePress = (key, timeout) => {
+    setPressedStates((prevState) => ({
+      ...prevState,
+      [key]: true,
+    }));
+    setTimeout(() => {
+      setPressedStates((prevState) => ({
+        ...prevState,
+        [key]: false,
+      }));
+    }, timeout);
   };
 
   return (
@@ -80,7 +89,7 @@ const Page1 = () => {
         className="background-video"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.375, ease: 'easeOut' }}
+        transition={{ duration: 0.2, ease: 'easeOut' }}
       />
 
       {/* Background Color Section */}
@@ -91,9 +100,9 @@ const Page1 = () => {
         src={SpurpunkTitle}
         alt="Spurpunk Title"
         className="spurpunk-title"
-        initial={{ y: -100, opacity: 0 }}
+        initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.25, ease: 'easeOut' }}
+        transition={{ duration: 0.15, ease: 'easeOut' }}
       />
 
       {/* Skeleton Frame (Blue) */}
@@ -103,7 +112,7 @@ const Page1 = () => {
         className="skeleton-frame"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.25, duration: 0.375, ease: 'easeOut' }}
+        transition={{ delay: 0.15, duration: 0.25, ease: 'easeOut' }}
       />
 
       {/* Trailer Ribbon with Link (Green) */}
@@ -114,19 +123,19 @@ const Page1 = () => {
           className="trailer-ribbon"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.375, ease: 'easeOut' }}
+          transition={{ delay: 0.3, duration: 0.25, ease: 'easeOut' }}
         />
       </a>
 
       {/* Play Trailer Button */}
       <motion.img
-        src={playTrailerPressed ? PlayTrailerPressed : PlayTrailerNormal}
+        src={pressedStates.playTrailer ? PlayTrailerPressed : PlayTrailerNormal}
         alt="Play Trailer"
         className="play-trailer-normal"
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.375, ease: 'easeOut' }}
-        onClick={() => handlePress(setPlayTrailerPressed, 200)}
+        transition={{ delay: 0.3, duration: 0.25, ease: 'easeOut' }}
+        onClick={() => handlePress('playTrailer', 200)}
       />
 
       {/* Are You a Spurpunk (Pink) */}
@@ -134,56 +143,56 @@ const Page1 = () => {
         src={AreYouSpurpunk}
         alt="Are You a Spurpunk?"
         className="are-you-spurpunk"
-        initial={{ y: 100, opacity: 0 }}
+        initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.625, duration: 0.375, ease: 'easeOut' }}
+        transition={{ delay: 0.35, duration: 0.25, ease: 'easeOut' }}
       />
 
       {/* Social Media Links */}
       <motion.img
-        src={discordPressed ? DiscordPressed : DiscordNormal}
+        src={pressedStates.discord ? DiscordPressed : DiscordNormal}
         alt="Discord"
         className="discord-normal"
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.25, ease: 'easeOut' }}
-        onClick={() => handlePress(setDiscordPressed, 200)}
+        transition={{ duration: 0.15, ease: 'easeOut' }}
+        onClick={() => handlePress('discord', 200)}
       />
       <motion.img
-        src={instagramPressed ? InstagramPressed : InstagramNormal}
+        src={pressedStates.instagram ? InstagramPressed : InstagramNormal}
         alt="Instagram"
         className="instagram-normal"
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.25, ease: 'easeOut' }}
-        onClick={() => handlePress(setInstagramPressed, 200)}
+        transition={{ duration: 0.15, ease: 'easeOut' }}
+        onClick={() => handlePress('instagram', 200)}
       />
       <motion.img
-        src={youtubePressed ? YoutubePressed : YoutubeNormal}
+        src={pressedStates.youtube ? YoutubePressed : YoutubeNormal}
         alt="Youtube"
         className="youtube-normal"
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.25, ease: 'easeOut' }}
-        onClick={() => handlePress(setYoutubePressed, 200)}
+        transition={{ duration: 0.15, ease: 'easeOut' }}
+        onClick={() => handlePress('youtube', 200)}
       />
       <motion.img
-        src={xPressed ? XPressed : XNormal}
+        src={pressedStates.x ? XPressed : XNormal}
         alt="X"
         className="x-normal"
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.25, ease: 'easeOut' }}
-        onClick={() => handlePress(setXPressed, 200)}
+        transition={{ duration: 0.15, ease: 'easeOut' }}
+        onClick={() => handlePress('x', 200)}
       />
       <motion.img
-        src={facebookPressed ? FacebookPressed : FacebookNormal}
+        src={pressedStates.facebook ? FacebookPressed : FacebookNormal}
         alt="Facebook"
         className="facebook-normal"
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.25, ease: 'easeOut' }}
-        onClick={() => handlePress(setFacebookPressed, 200)}
+        transition={{ duration: 0.15, ease: 'easeOut' }}
+        onClick={() => handlePress('facebook', 200)}
       />
 
       {/* PressKit Button */}
@@ -193,7 +202,7 @@ const Page1 = () => {
         className="presskit-button"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
+        transition={{ duration: 0.25, ease: 'easeOut' }}
       />
 
       {/* Buy Now Button */}
@@ -203,7 +212,7 @@ const Page1 = () => {
         className="buy-now"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
+        transition={{ duration: 0.25, ease: 'easeOut' }}
       />
 
       {/* Buy Now Buttons for iOS and Android */}
@@ -212,9 +221,9 @@ const Page1 = () => {
           src={GooglePlayBtn}
           alt="Google Play Store"
           className="googleplay-btn"
-          initial={{ y: 50, opacity: 0 }}
+          initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.25, ease: 'easeOut' }}
+          transition={{ duration: 0.15, ease: 'easeOut' }}
         />
       </a>
       <a href="https://apps.apple.com/ge/app/spurpunk-td/id1487386202#?platform=iphone" target="_blank" rel="noopener noreferrer">
@@ -222,9 +231,9 @@ const Page1 = () => {
           src={AppleStoreBtn}
           alt="Apple App Store"
           className="applestore-btn"
-          initial={{ y: 50, opacity: 0 }}
+          initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.25, ease: 'easeOut' }}
+          transition={{ duration: 0.15, ease: 'easeOut' }}
         />
       </a>
 
@@ -233,9 +242,9 @@ const Page1 = () => {
         src={Page1Landmass}
         alt="Page 1 Landmass"
         className="page1-landmass"
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.75, duration: 0.375, ease: 'easeOut' }}
+        transition={{ delay: 0.5, duration: 0.25, ease: 'easeOut' }}
       />
 
       {/* Map Cactus2 Icon */}
@@ -243,9 +252,9 @@ const Page1 = () => {
         src={MapCactus2Icon}
         alt="Map Cactus 2"
         className="map-cactus2"
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.75, duration: 0.375, ease: 'easeOut' }}
+        transition={{ delay: 0.5, duration: 0.25, ease: 'easeOut' }}
       />
 
       {/* Compass Icon */}
@@ -253,9 +262,9 @@ const Page1 = () => {
         src={CompassIcon}
         alt="Compass Icon"
         className="compass-icon"
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.875, duration: 0.375, ease: 'easeOut' }}
+        transition={{ delay: 0.6, duration: 0.25, ease: 'easeOut' }}
       />
 
       {/* Map Grass Icon */}
@@ -263,9 +272,9 @@ const Page1 = () => {
         src={MapGrassIcon}
         alt="Map Grass Icon"
         className="map-grass-icon"
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1, duration: 0.375, ease: 'easeOut' }}
+        transition={{ delay: 0.65, duration: 0.25, ease: 'easeOut' }}
       />
 
       {/* Duplicate Map Grass Icon with Different Position */}
@@ -273,9 +282,9 @@ const Page1 = () => {
         src={MapGrassIcon}
         alt="Map Grass Icon Duplicate"
         className="map-grass-icon-duplicate"
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1, duration: 0.375, ease: 'easeOut' }}
+        transition={{ delay: 0.65, duration: 0.25, ease: 'easeOut' }}
       />
 
       {/* Map Cactus Icon */}
@@ -283,9 +292,9 @@ const Page1 = () => {
         src={MapCactusIcon}
         alt="Map Cactus Icon"
         className="map-cactus-icon"
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1.25, duration: 0.375, ease: 'easeOut' }}
+        transition={{ delay: 0.7, duration: 0.25, ease: 'easeOut' }}
       />
 
       {/* Page 1 Dotted Line */}
@@ -293,9 +302,9 @@ const Page1 = () => {
         src={Page1DottedLine}
         alt="Page 1 Dotted Line"
         className="page1-dotted-line"
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
+        transition={{ delay: 0.75, duration: 0.25, ease: 'easeOut' }}
       />
 
       {/* Arrow Down */}
@@ -303,9 +312,9 @@ const Page1 = () => {
         src={ArrowDown}
         alt="Arrow Down"
         className="arrow-down"
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1.625, duration: 0.375, ease: 'easeOut' }}
+        transition={{ delay: 0.8, duration: 0.25, ease: 'easeOut' }}
       />
 
     <div>
