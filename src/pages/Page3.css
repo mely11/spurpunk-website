@@ -1,5 +1,5 @@
 .page3-container {
-    background-color: #f4e5c3;
+    background-color:  #df9542;
     padding: 40px 0;
     font-family: 'Arial', sans-serif;
     color: #3d3d3d;
@@ -21,7 +21,7 @@
   }
   
   .game-image {
-    max-height: 250px;
+    max-height: 500px;
   }
   
   .icon {
