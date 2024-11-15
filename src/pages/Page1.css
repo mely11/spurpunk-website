@@ -217,15 +217,6 @@
   height: 51px;
 }
 
-/* Play Trailer Button (Normal) */
-.play-trailer-normal {
-  position: absolute;
-  top: calc(799.5px - 63px / 2);
-  left: calc(50% - 503.5px);
-  width: 61px;
-  height: 63px;
-}
-
 /* Play Trailer Button (Pressed) */
 .play-trailer-pressed {
   position: absolute;
