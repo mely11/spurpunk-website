@@ -15,12 +15,54 @@
   height: 70px;
   background-color: #000;
   z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+/* PressKit Button and Social Media Icons - Left Section */
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.presskit-button {
+  width: 160px;
+  height: 51px;
+}
+
+/* Buy Now and App Store Buttons - Right Section */
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.buy-now,
+.googleplay-btn,
+.applestore-btn {
+  width: auto;
+  height: 51px; /* Maintain consistent height for better alignment */
+}
+
+/* Social Media Icons */
+.discord-normal,
+.instagram-normal,
+.youtube-normal,
+.x-normal,
+.facebook-normal {
+  width: 50px; /* Consistent width for all icons */
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 /* Background Video */
 .background-video {
   position: absolute;
-  top: 70px;
+  top: 70px; /* Starts just below the black top bar */
   left: 0;
   width: 100%;
   height: 100%;
@@ -39,7 +81,7 @@
   z-index: 2;
 }
 
-/* Core Elements */
+/* Core Elements - Maintain Absolute Positioning for Visual Consistency */
 .spurpunk-title,
 .skeleton-frame,
 .trailer-ribbon,
@@ -57,7 +99,7 @@
   z-index: 4;
 }
 
-/* Specific Elements */
+/* Specific Elements Styling */
 .spurpunk-title {
   top: calc(199.5px - 175px / 2);
   left: calc(50% - 536px / 2);
@@ -96,7 +138,7 @@
   left: 40px;
   width: 159px;
   height: 160px;
-  z-index: 6;  /* Above dotted line */
+  z-index: 6; /* Above dotted line */
 }
 
 .compass-icon {
@@ -147,219 +189,17 @@
   left: 0;
   width: 100%;
   height: auto;
-  z-index: 3;  /* Below core elements */
+  z-index: 3; /* Below core elements */
 }
 
 /* Play Trailer Button */
-.play-trailer-normal {
+.play-trailer-normal,
+.play-trailer-pressed {
   top: calc(300px + 252px);
   left: 44.3%;
   transform: translateX(-50%);
   width: 61px;
   height: 63px;
   cursor: pointer;
-  z-index: 5;  /* Above the rest of the core elements */
+  z-index: 5; /* Above the rest of the core elements */
 }
-
-/* Social Media Buttons */
-.discord-normal,
-.instagram-normal,
-.youtube-normal,
-.x-normal,
-.facebook-normal,
-.presskit-button,
-.buy-now,
-.googleplay-btn,
-.applestore-btn {
-  position: absolute;
-  top: 8px;
-  z-index: 5;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/* Specific Social Media Button Positions */
-.discord-normal { left: 510px; }
-.instagram-normal { left: 440px; }
-.youtube-normal { left: 370px; }
-.x-normal { left: 300px; }
-.facebook-normal { left: 230px; }
-
-/* PressKit Button */
-.presskit-button {
-  top: calc(39.5px - 60px / 2);
-  left: calc(107px - 160px / 2);
-  width: 160px;
-  height: 51px;
-}
-
-/* Buy Now Button */
-.buy-now {
-  top: calc(36.5px - 29px / 2);
-  left: calc(654.5px - 89px / 2);
-  width: 89px;
-  height: 29px;
-}
-
-/* GooglePlay Button */
-.googleplay-btn {
-  top: calc(39.5px - 60px / 2);
-  left: calc(992px - 160px / 2);
-  width: 160px;
-  height: 51px;
-}
-
-/* AppleStore Button */
-.applestore-btn {
-  top: calc(39.5px - 60px / 2);
-  left: calc(811px - 160px / 2);
-  width: 160px;
-  height: 51px;
-}
-
-/* Play Trailer Button (Pressed) */
-.play-trailer-pressed {
-  position: absolute;
-  top: calc(800px - 58px / 2);
-  left: calc(50% - 504px);
-  width: 58px;
-  height: 58px;
-}
-
-/*Page 2*/
-
-/*Meet your instructors text*/
-.all-text {
-  position: absolute;
-  top: 115vh;  /* Adjusted to a relative height for responsiveness */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%; /* Scales width responsively */
-  max-width: 1034px;
-  height: auto; /* Allows for height adjustment */
-  z-index: 6;
-}
-
-.all-text-background {
-  position: absolute;
-  top: 132vh; /* Relative position */
-  width: 100%;
-  height: 80vh;
-  z-index: 3;
-}
-
-/* Page 2 dotted line */
-.page2-dotted-line {
-  position: absolute;
-  top: 118vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 62vw; /* Makes width responsive */
-  max-width: 907px;
-  height: 110vh;
-  z-index: 4;
-}
-
-/* Responsive Text Backgrounds */
-.text-background1,
-.text-background2,
-.text-background3,
-.text-background4 {
-  position: absolute;
-  top: 188vh;
-  width: 18vw; /* Responsive width */
-  height: 18vh; /* Maintain aspect ratio */
-  z-index: 5;
-}
-
-.text-background1 { left: 8.5vw; }
-.text-background2 { left: 30vw; }
-.text-background3 { left: 51.5vw; }
-.text-background4 { left: 73vw; }
-
-/* Hero Frames */
-.hero-frame1,
-.hero-frame2,
-.hero-frame3,
-.hero-frame4 {
-  position: absolute;
-  top: 144vh;
-  width: 19vw; /* Responsive width */
-  height: 43vh; /* Maintain aspect ratio */
-  z-index: 4;
-}
-
-.hero-frame1 { left: 8vw; }
-.hero-frame2 { left: 29.5vw; }
-.hero-frame3 { left: 51vw; }
-.hero-frame4 { left: 72.5vw; }
-
-/* Heroes */
-.sean, .margarita, .phil, .mickey{
-  position: absolute;
-  width: 16vw; /* Responsive width */
-  height: auto; /* Maintain aspect ratio */
-  z-index: 5;
-}
-
-
-.sean { top: 144.1vh; left: 9vw; }
-.margarita { top: 146vh; left: 31vw; }
-.phil { top: 144.6vh; left: 51vw; }
-.mickey { 
-  top: 150.5vh; 
-  left: 69vw; 
-  position: absolute;
-  width: 20vw; /* Responsive width */
-  height: auto; /* Maintain aspect ratio */
-}
-
-/* Silhouettes */
-.sean-gear-silhouette,
-.margarita-cards-silhouette,
-.phil-bomb-silhouette,
-.mickey-skull-silhouette {
-  position: absolute;
-  top: 131vh;
-  width: 12vw; /* Responsive width */
-  height: auto; /* Maintain aspect ratio */
-  z-index: 1;
-}
-
-.sean-gear-silhouette { left: 11vw; }
-.margarita-cards-silhouette { left: 33vw; }
-.phil-bomb-silhouette { left: 54vw; }
-.mickey-skull-silhouette { left: 76vw; }
-
-/* Media Query for Smaller Screens */
-@media (max-width: 768px) {
-  .all-text {
-    width: 90%; /* Increased width for mobile */
-    top: 90vh; /* Adjusted position */
-  }
-
-  .text-background1,
-  .text-background2,
-  .text-background3,
-  .text-background4,
-  .hero-frame1,
-  .hero-frame2,
-  .hero-frame3,
-  .hero-frame4,
-  .sean,
-  .margarita,
-  .phil,
-  .mickey,
-  .sean-gear-silhouette,
-  .margarita-cards-silhouette,
-  .phil-bomb-silhouette,
-  .mickey-skull-silhouette {
-    width: 20vw; /* Reduced size for smaller screens */
-  }
-  
-  .page2-dotted-line {
-    width: 80vw;
-    top: 95vh;
-  }
-}
-

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './Page1.css';
 
 // Importing images
@@ -33,25 +34,6 @@ import BuyNowButton from '../assets/images/Buy-Now@.png';
 // Importing video
 import GameplayVideo from '../assets/videos/Gameplay_BurialGrounds_Clips_Better.mp4';
 
-// Page2
-import AllText from '../assets/images/All_text@.png'
-import Page2DottedLine from '../assets/images/Page-2-dotted_line@.png'
-import HeroFrame from '../assets/images/Hero_frame@.png'
-import TextBackground from '../assets/images/Page2_Rectangle_1@.png'
-import AllTextBackground from '../assets/images/Page2-Rectangle@.png'
-import Sean from '../assets/images/Hero_Sean@.png'
-import Margarita from '../assets/images/Hero_Margarita@.png'
-import Phil from '../assets/images/Hero_Phil@.png'
-import Mickey from '../assets/images/Hero_Mickey@.png'
-import SeanGearSilhouette from '../assets/images/Page2_Phil_Gear_silhouette@.png'
-import SeanGear from '../assets/images/Page2_Phil_Gear@.png'
-import MargaritaCardsSilhouette from '../assets/images/Page2_Susies_Cards_silhouette@.png'
-import MargaritaCards from '../assets/images/Page2_Susies_Cards@.png'
-import PhilBombSilhouette from '../assets/images/Page2_Phils_Bomb_silhouette@.png'
-import PhilBomb from '../assets/images/Page2_Phils_Bomb@.png'
-import MickeySkullSilhouette from '../assets/images/Page2_Mickeys_Skull_silhouette@.png'
-import MickeySkull from '../assets/images/Page2_Mickeys_Skull@.png'
-
 const Page1 = () => {
   const [pressedStates, setPressedStates] = useState({
     discord: false,
@@ -76,9 +58,103 @@ const Page1 = () => {
   };
 
   return (
-    <div className="page1">
+    <div className="container-fluid page1 p-0">
       {/* Black Background for Top Section */}
-      <div className="top-bar"></div>
+      <div className="top-bar">
+        {/* Left Side Section: Press Kit Button and Social Media Icons */}
+        <div className="top-bar-left d-flex align-items-center gap-3">
+          {/* PressKit Button */}
+          <motion.img
+            src={PressKitButton}
+            alt="Press Kit"
+            className="presskit-button"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.25, ease: 'easeOut' }}
+          />
+
+          {/* Social Media Links */}
+          <div className="d-flex justify-content-center">
+            <motion.img
+              src={pressedStates.discord ? DiscordPressed : DiscordNormal}
+              alt="Discord"
+              className="discord-normal mx-2"
+              initial={{ y: 25, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.15, ease: 'easeOut' }}
+              onClick={() => handlePress('discord', 200)}
+            />
+            <motion.img
+              src={pressedStates.instagram ? InstagramPressed : InstagramNormal}
+              alt="Instagram"
+              className="instagram-normal mx-2"
+              initial={{ y: 25, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.15, ease: 'easeOut' }}
+              onClick={() => handlePress('instagram', 200)}
+            />
+            <motion.img
+              src={pressedStates.youtube ? YoutubePressed : YoutubeNormal}
+              alt="Youtube"
+              className="youtube-normal mx-2"
+              initial={{ y: 25, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.15, ease: 'easeOut' }}
+              onClick={() => handlePress('youtube', 200)}
+            />
+            <motion.img
+              src={pressedStates.x ? XPressed : XNormal}
+              alt="X"
+              className="x-normal mx-2"
+              initial={{ y: 25, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.15, ease: 'easeOut' }}
+              onClick={() => handlePress('x', 200)}
+            />
+            <motion.img
+              src={pressedStates.facebook ? FacebookPressed : FacebookNormal}
+              alt="Facebook"
+              className="facebook-normal mx-2"
+              initial={{ y: 25, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.15, ease: 'easeOut' }}
+              onClick={() => handlePress('facebook', 200)}
+            />
+          </div>
+        </div>
+
+        {/* Right Side Section: Buy Now and Store Buttons */}
+        <div className="top-bar-right d-flex align-items-center gap-3">
+          <motion.img
+            src={BuyNowButton}
+            alt="Buy Now"
+            className="buy-now"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.25, ease: 'easeOut' }}
+          />
+          <a href="https://play.google.com/store/apps/details?id=com.easleydunnproductions.spurpunk&hl=en_US&gl=US" target="_blank" rel="noopener noreferrer">
+            <motion.img
+              src={GooglePlayBtn}
+              alt="Google Play Store"
+              className="googleplay-btn"
+              initial={{ y: 25, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.15, ease: 'easeOut' }}
+            />
+          </a>
+          <a href="https://apps.apple.com/ge/app/spurpunk-td/id1487386202#?platform=iphone" target="_blank" rel="noopener noreferrer">
+            <motion.img
+              src={AppleStoreBtn}
+              alt="Apple App Store"
+              className="applestore-btn"
+              initial={{ y: 25, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.15, ease: 'easeOut' }}
+            />
+          </a>
+        </div>
+      </div>
 
       {/* Background Video */}
       <motion.video
@@ -96,412 +172,159 @@ const Page1 = () => {
       <div className="background-color"></div>
 
       {/* Spurpunk Title (Red) */}
-      <motion.img
-        src={SpurpunkTitle}
-        alt="Spurpunk Title"
-        className="spurpunk-title"
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.15, ease: 'easeOut' }}
-      />
+      <div className="container d-flex justify-content-center position-relative spurpunk-title-container">
+        <motion.img
+          src={SpurpunkTitle}
+          alt="Spurpunk Title"
+          className="spurpunk-title"
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.15, ease: 'easeOut' }}
+        />
+      </div>
 
       {/* Skeleton Frame (Blue) */}
-      <motion.img
-        src={SkeletonFrame}
-        alt="Skeleton Frame"
-        className="skeleton-frame"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.15, duration: 0.25, ease: 'easeOut' }}
-      />
-
-      {/* Trailer Ribbon with Link (Green) */}
-      <a href="https://youtu.be/GEHQamurmBI?si=I8-euk5_BwD9Zi6m" target="_blank" rel="noopener noreferrer">
+      <div className="container d-flex justify-content-center position-relative skeleton-frame-container">
         <motion.img
-          src={TrailerRibbon}
-          alt="Trailer Ribbon"
-          className="trailer-ribbon"
+          src={SkeletonFrame}
+          alt="Skeleton Frame"
+          className="skeleton-frame"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.25, ease: 'easeOut' }}
+          transition={{ delay: 0.15, duration: 0.25, ease: 'easeOut' }}
         />
-      </a>
+      </div>
+
+      {/* Trailer Ribbon with Link (Green) */}
+      <div className="container d-flex justify-content-center position-relative trailer-ribbon-container">
+        <a href="https://youtu.be/GEHQamurmBI?si=I8-euk5_BwD9Zi6m" target="_blank" rel="noopener noreferrer">
+          <motion.img
+            src={TrailerRibbon}
+            alt="Trailer Ribbon"
+            className="trailer-ribbon"
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.25, ease: 'easeOut' }}
+          />
+        </a>
+      </div>
 
       {/* Play Trailer Button */}
-      <motion.img
-        src={pressedStates.playTrailer ? PlayTrailerPressed : PlayTrailerNormal}
-        alt="Play Trailer"
-        className="play-trailer-normal"
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.25, ease: 'easeOut' }}
-        onClick={() => handlePress('playTrailer', 200)}
-      />
+      <div className="container d-flex justify-content-center position-relative play-trailer-container">
+        <motion.img
+          src={pressedStates.playTrailer ? PlayTrailerPressed : PlayTrailerNormal}
+          alt="Play Trailer"
+          className="play-trailer-normal"
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.25, ease: 'easeOut' }}
+          onClick={() => handlePress('playTrailer', 200)}
+        />
+      </div>
 
       {/* Are You a Spurpunk (Pink) */}
-      <motion.img
-        src={AreYouSpurpunk}
-        alt="Are You a Spurpunk?"
-        className="are-you-spurpunk"
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.35, duration: 0.25, ease: 'easeOut' }}
-      />
-
-      {/* Social Media Links */}
-      <motion.img
-        src={pressedStates.discord ? DiscordPressed : DiscordNormal}
-        alt="Discord"
-        className="discord-normal"
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.15, ease: 'easeOut' }}
-        onClick={() => handlePress('discord', 200)}
-      />
-      <motion.img
-        src={pressedStates.instagram ? InstagramPressed : InstagramNormal}
-        alt="Instagram"
-        className="instagram-normal"
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.15, ease: 'easeOut' }}
-        onClick={() => handlePress('instagram', 200)}
-      />
-      <motion.img
-        src={pressedStates.youtube ? YoutubePressed : YoutubeNormal}
-        alt="Youtube"
-        className="youtube-normal"
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.15, ease: 'easeOut' }}
-        onClick={() => handlePress('youtube', 200)}
-      />
-      <motion.img
-        src={pressedStates.x ? XPressed : XNormal}
-        alt="X"
-        className="x-normal"
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.15, ease: 'easeOut' }}
-        onClick={() => handlePress('x', 200)}
-      />
-      <motion.img
-        src={pressedStates.facebook ? FacebookPressed : FacebookNormal}
-        alt="Facebook"
-        className="facebook-normal"
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.15, ease: 'easeOut' }}
-        onClick={() => handlePress('facebook', 200)}
-      />
-
-      {/* PressKit Button */}
-      <motion.img
-        src={PressKitButton}
-        alt="Press Kit"
-        className="presskit-button"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.25, ease: 'easeOut' }}
-      />
-
-      {/* Buy Now Button */}
-      <motion.img
-        src={BuyNowButton}
-        alt="Buy Now"
-        className="buy-now"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.25, ease: 'easeOut' }}
-      />
-
-      {/* Buy Now Buttons for iOS and Android */}
-      <a href="https://play.google.com/store/apps/details?id=com.easleydunnproductions.spurpunk&hl=en_US&gl=US" target="_blank" rel="noopener noreferrer">
+      <div className="container d-flex justify-content-center position-relative are-you-spurpunk-container">
         <motion.img
-          src={GooglePlayBtn}
-          alt="Google Play Store"
-          className="googleplay-btn"
-          initial={{ y: 25, opacity: 0 }}
+          src={AreYouSpurpunk}
+          alt="Are You a Spurpunk?"
+          className="are-you-spurpunk"
+          initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.15, ease: 'easeOut' }}
+          transition={{ delay: 0.35, duration: 0.25, ease: 'easeOut' }}
         />
-      </a>
-      <a href="https://apps.apple.com/ge/app/spurpunk-td/id1487386202#?platform=iphone" target="_blank" rel="noopener noreferrer">
-        <motion.img
-          src={AppleStoreBtn}
-          alt="Apple App Store"
-          className="applestore-btn"
-          initial={{ y: 25, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.15, ease: 'easeOut' }}
-        />
-      </a>
+      </div>
 
       {/* Landmass Section for the Background */}
-      <motion.img
-        src={Page1Landmass}
-        alt="Page 1 Landmass"
-        className="page1-landmass"
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.25, ease: 'easeOut' }}
-      />
+      <div className="container d-flex justify-content-center position-relative landmass-container">
+        <motion.img
+          src={Page1Landmass}
+          alt="Page 1 Landmass"
+          className="page1-landmass"
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.25, ease: 'easeOut' }}
+        />
+      </div>
 
       {/* Map Cactus2 Icon */}
-      <motion.img
-        src={MapCactus2Icon}
-        alt="Map Cactus 2"
-        className="map-cactus2"
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.25, ease: 'easeOut' }}
-      />
+      <div className="container d-flex justify-content-center position-relative map-cactus2-container">
+        <motion.img
+          src={MapCactus2Icon}
+          alt="Map Cactus 2"
+          className="map-cactus2"
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.25, ease: 'easeOut' }}
+        />
+      </div>
 
       {/* Compass Icon */}
-      <motion.img
-        src={CompassIcon}
-        alt="Compass Icon"
-        className="compass-icon"
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.6, duration: 0.25, ease: 'easeOut' }}
-      />
+      <div className="container d-flex justify-content-center position-relative compass-container">
+        <motion.img
+          src={CompassIcon}
+          alt="Compass Icon"
+          className="compass-icon"
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.25, ease: 'easeOut' }}
+        />
+      </div>
 
       {/* Map Grass Icon */}
-      <motion.img
-        src={MapGrassIcon}
-        alt="Map Grass Icon"
-        className="map-grass-icon"
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.65, duration: 0.25, ease: 'easeOut' }}
-      />
-
-      {/* Duplicate Map Grass Icon with Different Position */}
-      <motion.img
-        src={MapGrassIcon}
-        alt="Map Grass Icon Duplicate"
-        className="map-grass-icon-duplicate"
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.65, duration: 0.25, ease: 'easeOut' }}
-      />
+      <div className="container d-flex justify-content-center position-relative grass-container">
+        <motion.img
+          src={MapGrassIcon}
+          alt="Map Grass Icon"
+          className="map-grass-icon mx-2"
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.65, duration: 0.25, ease: 'easeOut' }}
+        />
+        <motion.img
+          src={MapGrassIcon}
+          alt="Map Grass Icon Duplicate"
+          className="map-grass-icon-duplicate mx-2"
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.65, duration: 0.25, ease: 'easeOut' }}
+        />
+      </div>
 
       {/* Map Cactus Icon */}
-      <motion.img
-        src={MapCactusIcon}
-        alt="Map Cactus Icon"
-        className="map-cactus-icon"
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.7, duration: 0.25, ease: 'easeOut' }}
-      />
+      <div className="container d-flex justify-content-center position-relative cactus-container">
+        <motion.img
+          src={MapCactusIcon}
+          alt="Map Cactus Icon"
+          className="map-cactus-icon"
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.7, duration: 0.25, ease: 'easeOut' }}
+        />
+      </div>
 
       {/* Page 1 Dotted Line */}
-      <motion.img
-        src={Page1DottedLine}
-        alt="Page 1 Dotted Line"
-        className="page1-dotted-line"
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.75, duration: 0.25, ease: 'easeOut' }}
-      />
+      <div className="container d-flex justify-content-center position-relative dotted-line-container">
+        <motion.img
+          src={Page1DottedLine}
+          alt="Page 1 Dotted Line"
+          className="page1-dotted-line"
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.75, duration: 0.25, ease: 'easeOut' }}
+        />
+      </div>
 
       {/* Arrow Down */}
-      <motion.img
-        src={ArrowDown}
-        alt="Arrow Down"
-        className="arrow-down"
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.8, duration: 0.25, ease: 'easeOut' }}
-      />
-
-    <div>
-
-    {/* All text */}
-    <motion.img
-      src={AllText}
-      alt="Meet Your Instructors"
-      className="all-text"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.625, duration: 0.375, ease: 'easeOut' }}
-    />
-    {/* All text background */}
-    <motion.img
-      src={AllTextBackground}
-      alt="All Text Background"
-      className="all-text-background"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.625, duration: 0.375, ease: 'easeOut' }}
-    />
-
-    {/* Text BG 1 */}
-    <motion.img
-      src={TextBackground}
-      alt="Text Background"
-      className="text-background1"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.625, duration: 0.375, ease: 'easeOut' }}
-    />
-    {/* Text BG 2 */}
-    <motion.img
-      src={TextBackground}
-      alt="Text Background"
-      className="text-background2"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.625, duration: 0.375, ease: 'easeOut' }}
-    />
-    {/* Text BG 3 */}
-    <motion.img
-      src={TextBackground}
-      alt="Text Background"
-      className="text-background3"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.625, duration: 0.375, ease: 'easeOut' }}
-    />
-    {/* Text BG 4 */}
-    <motion.img
-      src={TextBackground}
-      alt="Text Background"
-      className="text-background4"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.625, duration: 0.375, ease: 'easeOut' }}
-    />
-
-    {/* Page 2 Dotted Line */}
-    <motion.img
-      src={Page2DottedLine}
-      alt="Page 2 Dotted Line"
-      className="page2-dotted-line"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-
-    {/* Hero frame 1 */}
-    <motion.img
-      src={HeroFrame}
-      alt="Hero frame 1"
-      className="hero-frame1"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-
-    {/* Hero frame 2 */}
-    <motion.img
-      src={HeroFrame}
-      alt="Hero frame 2"
-      className="hero-frame2"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-
-    {/* Hero frame 3 */}
-    <motion.img
-      src={HeroFrame}
-      alt="Hero frame 3"
-      className="hero-frame3"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-
-    {/* Hero frame 4 */}
-    <motion.img
-      src={HeroFrame}
-      alt="Hero frame 4"
-      className="hero-frame4"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-
-    {/* Sean */}
-    <motion.img
-      src={Sean}
-      alt="Hero Sean"
-      className="sean"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-    {/* Margarita */}
-    <motion.img
-      src={Margarita}
-      alt="Hero Margarita"
-      className="margarita"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-    {/* Phil */}
-    <motion.img
-      src={Phil}
-      alt="Hero Phil"
-      className="phil"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-    {/* Mickey */}
-    <motion.img
-      src={Mickey}
-      alt="Hero Mickey"
-      className="mickey"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-
-    {/* Sean's gear silhouette*/}
-    <motion.img
-      src={SeanGearSilhouette}
-      alt="Sean's gear silhouette"
-      className="sean-gear-silhouette"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-    {/* Margarita's cards silhouette */}
-    <motion.img
-      src={MargaritaCardsSilhouette}
-      alt="Margarita's cards silhouette"
-      className="margarita-cards-silhouette"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-    {/* Phils' bomb silhouette */}
-    <motion.img
-      src={PhilBombSilhouette}
-      alt="Phil's bomb silhouette"
-      className="phil-bomb-silhouette"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-    {/* Mickey's skull silhouette */}
-    <motion.img
-      src={MickeySkullSilhouette}
-      alt="Mickey's skull silhouette"
-      className="mickey-skull-silhouette"
-      // initial={{ y: 50, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 1.375, duration: 0.375, ease: 'easeOut' }}
-    />
-    
-
-    </div>
-
+      <div className="container d-flex justify-content-center position-relative arrow-container">
+        <motion.img
+          src={ArrowDown}
+          alt="Arrow Down"
+          className="arrow-down"
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.8, duration: 0.25, ease: 'easeOut' }}
+        />
+      </div>
     </div>
   );
 };
