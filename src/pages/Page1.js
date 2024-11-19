@@ -183,8 +183,9 @@ const Page1 = () => {
         />
       </div>
 
-      {/* Skeleton Frame (Blue) */}
-      <div className="container d-flex justify-content-center position-relative skeleton-frame-container">
+      {/* Trailer Wrapper Section */}
+      <div className="container position-relative trailer-wrapper">
+        {/* Skeleton Frame (Blue) */}
         <motion.img
           src={SkeletonFrame}
           alt="Skeleton Frame"
@@ -193,10 +194,7 @@ const Page1 = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.15, duration: 0.25, ease: 'easeOut' }}
         />
-      </div>
 
-      {/* Trailer Ribbon and Play Trailer Button Section */}
-      <div className="container position-relative trailer-wrapper">
         {/* Trailer Ribbon */}
         <a href="https://youtu.be/GEHQamurmBI?si=I8-euk5_BwD9Zi6m" target="_blank" rel="noopener noreferrer">
           <motion.img

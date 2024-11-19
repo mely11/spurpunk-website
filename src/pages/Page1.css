@@ -122,25 +122,38 @@
   margin: 0 auto; /* Center horizontally */
 }
 
+/* Skeleton Frame (Blue) */
+.skeleton-frame {
+  position: absolute; /* Positioned relative to the trailer-wrapper */
+  top: 275px;
+  left: -120px;
+  transform: translateY(-50%);
+  width: auto;
+  max-width: 60vw;
+  height: auto;
+  z-index: 4;
+}
+
 /* Trailer Ribbon */
 .trailer-ribbon {
   position: absolute; /* Position inside the trailer-wrapper */
   top: 480px;
-  left: -140px;
+  left: -140px; /* Keep consistent relative to the wrapper */
   transform: translateY(-50%); /* Center vertically within the wrapper */
   width: auto;
   max-width: 70vw;
   height: auto;
+  z-index: 5;
 }
 
 /* Play Trailer Button */
 .play-trailer-normal {
   position: absolute; /* Positioned absolutely in relation to the wrapper */
   top: 545px;
-  left: -62.5px;
+  left: -62.5px; /* Ensure it aligns with the trailer ribbon */
   transform: translateY(-50%);
   cursor: pointer;
-  z-index: 5;
+  z-index: 6;
 }
 
 .are-you-spurpunk {
@@ -158,7 +171,6 @@
   width: 159px;
   height: 160px;
   z-index: 6;
-  /* Above dotted line */
 }
 
 .compass-icon {
