@@ -44,7 +44,7 @@
 .googleplay-btn,
 .applestore-btn {
   width: auto;
-  height: 51px; /* Maintain consistent height for better alignment */
+  height: 50px;
 }
 
 /* Social Media Icons */
@@ -53,7 +53,7 @@
 .youtube-normal,
 .x-normal,
 .facebook-normal {
-  width: 50px; /* Consistent width for all icons */
+  width: 50px;
   height: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -62,7 +62,8 @@
 /* Background Video */
 .background-video {
   position: absolute;
-  top: 70px; /* Starts just below the black top bar */
+  top: 70px;
+  /* Starts just below the black top bar */
   left: 0;
   width: 100%;
   height: 100%;
@@ -93,8 +94,7 @@
 .map-cactus-icon,
 .page1-dotted-line,
 .arrow-down,
-.page1-landmass,
-.play-trailer-normal {
+.page1-landmass {
   position: absolute;
   z-index: 4;
 }
@@ -115,13 +115,32 @@
   height: auto;
 }
 
+/* Trailer Wrapper */
+.trailer-wrapper {
+  position: relative;
+  width: fit-content; /* Container only takes as much space as needed */
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Trailer Ribbon */
 .trailer-ribbon {
-  top: calc(300px + 185px);
-  left: 39%;
-  transform: translateX(-50%);
+  position: absolute; /* Position inside the trailer-wrapper */
+  top: 480px;
+  left: -140px;
+  transform: translateY(-50%); /* Center vertically within the wrapper */
   width: auto;
   max-width: 70vw;
   height: auto;
+}
+
+/* Play Trailer Button */
+.play-trailer-normal {
+  position: absolute; /* Positioned absolutely in relation to the wrapper */
+  top: 545px;
+  left: -62.5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 5;
 }
 
 .are-you-spurpunk {
@@ -138,7 +157,8 @@
   left: 40px;
   width: 159px;
   height: 160px;
-  z-index: 6; /* Above dotted line */
+  z-index: 6;
+  /* Above dotted line */
 }
 
 .compass-icon {
@@ -166,7 +186,7 @@
   top: 300px;
   left: 1017.5px;
   width: 153px;
-  height: 136px; /* Above dotted line */
+  height: 136px;
 }
 
 .page1-dotted-line {
@@ -189,17 +209,6 @@
   left: 0;
   width: 100%;
   height: auto;
-  z-index: 3; /* Below core elements */
-}
-
-/* Play Trailer Button */
-.play-trailer-normal,
-.play-trailer-pressed {
-  top: calc(300px + 252px);
-  left: 44.3%;
-  transform: translateX(-50%);
-  width: 61px;
-  height: 63px;
-  cursor: pointer;
-  z-index: 5; /* Above the rest of the core elements */
+  z-index: 3;
+  /* Below core elements */
 }

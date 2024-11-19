@@ -195,8 +195,9 @@ const Page1 = () => {
         />
       </div>
 
-      {/* Trailer Ribbon with Link (Green) */}
-      <div className="container d-flex justify-content-center position-relative trailer-ribbon-container">
+      {/* Trailer Ribbon and Play Trailer Button Section */}
+      <div className="container position-relative trailer-wrapper">
+        {/* Trailer Ribbon */}
         <a href="https://youtu.be/GEHQamurmBI?si=I8-euk5_BwD9Zi6m" target="_blank" rel="noopener noreferrer">
           <motion.img
             src={TrailerRibbon}
@@ -207,10 +208,8 @@ const Page1 = () => {
             transition={{ delay: 0.3, duration: 0.25, ease: 'easeOut' }}
           />
         </a>
-      </div>
 
-      {/* Play Trailer Button */}
-      <div className="container d-flex justify-content-center position-relative play-trailer-container">
+        {/* Play Trailer Button */}
         <motion.img
           src={pressedStates.playTrailer ? PlayTrailerPressed : PlayTrailerNormal}
           alt="Play Trailer"
