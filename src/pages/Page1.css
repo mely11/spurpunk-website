@@ -88,7 +88,6 @@
 .trailer-ribbon,
 .are-you-spurpunk,
 .map-cactus2,
-.compass-icon,
 .map-grass-icon,
 .map-grass-icon-duplicate,
 .map-cactus-icon,
@@ -174,10 +173,12 @@
 }
 
 .compass-icon {
+  position: absolute;
   top: 50vh;
   left: 210px;
   width: 200px;
   height: 200px;
+  z-index: 3;
 }
 
 .map-grass-icon {
