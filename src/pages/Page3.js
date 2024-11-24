@@ -4,41 +4,61 @@ import './Page3.css';
 import topImage from '../assets/images/Page3_Top.png';
 import middleImage from '../assets/images/Page3_Middle.png';
 import bottomImage from '../assets/images/Page3_Bottom.png';
-
+import { motion } from "framer-motion";
 
 const Page3 = () => {
+
+
   return (
     <div className="page3-container">
       <div className="container">
-
         {/* Top Section */}
-        <div className="row top-section mb-5">
+        <motion.div
+          initial = {{
+            opacity: 0,
+          }}
+          whileInView={{opacity: 1}}
+          viewport={{amount: "all"}}
+          className="row top-section mb-5"
+        >
           <img
-            src={topImage} // Use the imported image variable
+            src={topImage}
             alt="Top Section"
-            className='img-fluid game-image'
+            className="img-fluid games-image"
           />
-        </div>
+        </motion.div>
 
         {/* Middle Section */}
-        <div className="row middle-section mb-5">
+        <motion.div
+          initial = {{
+            opacity: 0,
+          }}
+          whileInView={{opacity: 1}}
+          viewport={{amount: "all"}}
+          className="row middle-section mb-5"
+        >
           <img
-            src= {middleImage} // Use the imported image variable
+            src={middleImage}
             alt="Middle Section"
             className="img-fluid game-image"
-            
           />
-        </div>
+        </motion.div>
 
         {/* Bottom Section */}
-        <div className="row bottom-section">
+        <motion.div
+          initial = {{
+            opacity: 0,
+          }}
+          whileInView={{opacity: 1}}
+          viewport={{amount: "all"}}
+          className="row bottom-section"
+        >
           <img
-            src={bottomImage} // Use the imported image variable
+            src={bottomImage}
             alt="Bottom Section"
-            className='img-fluid game-image'
+            className="img-fluid game-image"
           />
-        </div>
-
+        </motion.div>
       </div>
     </div>
   );
