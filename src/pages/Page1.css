@@ -8,19 +8,62 @@
 
 /* Black Background for Top Section */
 .top-bar {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 70px;
   background-color: #000;
   z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+/* PressKit Button and Social Media Icons - Left Section */
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.presskit-button {
+  width: 160px;
+  height: 51px;
+}
+
+/* Buy Now and App Store Buttons - Right Section */
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.buy-now,
+.googleplay-btn,
+.applestore-btn {
+  width: auto;
+  height: 50px;
+}
+
+/* Social Media Icons */
+.discord-normal,
+.instagram-normal,
+.youtube-normal,
+.x-normal,
+.facebook-normal {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 /* Background Video */
 .background-video {
   position: absolute;
   top: 70px;
+  /* Starts just below the black top bar */
   left: 0;
   width: 100%;
   height: 100%;
@@ -39,25 +82,23 @@
   z-index: 2;
 }
 
-/* Core Elements */
+/* Core Elements - Maintain Absolute Positioning for Visual Consistency */
 .spurpunk-title,
 .skeleton-frame,
 .trailer-ribbon,
 .are-you-spurpunk,
 .map-cactus2,
-.compass-icon,
 .map-grass-icon,
 .map-grass-icon-duplicate,
 .map-cactus-icon,
 .page1-dotted-line,
 .arrow-down,
-.page1-landmass,
-.play-trailer-normal {
+.page1-landmass {
   position: absolute;
   z-index: 4;
 }
 
-/* Specific Elements */
+/* Specific Elements Styling */
 .spurpunk-title {
   top: calc(199.5px - 175px / 2);
   left: calc(50% - 536px / 2);
@@ -73,13 +114,45 @@
   height: auto;
 }
 
+/* Trailer Wrapper */
+.trailer-wrapper {
+  position: relative;
+  width: fit-content; /* Container only takes as much space as needed */
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Skeleton Frame (Blue) */
+.skeleton-frame {
+  position: absolute; /* Positioned relative to the trailer-wrapper */
+  top: 275px;
+  left: -120px;
+  transform: translateY(-50%);
+  width: auto;
+  max-width: 60vw;
+  height: auto;
+  z-index: 4;
+}
+
+/* Trailer Ribbon */
 .trailer-ribbon {
-  top: calc(300px + 185px);
-  left: 39%;
-  transform: translateX(-50%);
+  position: absolute; /* Position inside the trailer-wrapper */
+  top: 480px;
+  left: -140px; /* Keep consistent relative to the wrapper */
+  transform: translateY(-50%); /* Center vertically within the wrapper */
   width: auto;
   max-width: 70vw;
   height: auto;
+  z-index: 5;
+}
+
+/* Play Trailer Button */
+.play-trailer-normal {
+  position: absolute; /* Positioned absolutely in relation to the wrapper */
+  top: 545px;
+  left: -62.5px; /* Ensure it aligns with the trailer ribbon */
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 6;
 }
 
 .are-you-spurpunk {
@@ -96,14 +169,16 @@
   left: 40px;
   width: 159px;
   height: 160px;
-  z-index: 6;  /* Above dotted line */
+  z-index: 6;
 }
 
 .compass-icon {
+  position: absolute;
   top: 50vh;
   left: 210px;
   width: 200px;
   height: 200px;
+  z-index: 3;
 }
 
 .map-grass-icon {
@@ -124,7 +199,7 @@
   top: 300px;
   left: 1017.5px;
   width: 153px;
-  height: 136px; /* Above dotted line */
+  height: 136px;
 }
 
 .page1-dotted-line {
@@ -147,82 +222,6 @@
   left: 0;
   width: 100%;
   height: auto;
-  z-index: 3;  /* Below core elements */
+  z-index: 3;
+  /* Below core elements */
 }
-
-/* Play Trailer Button */
-.play-trailer-normal {
-  top: calc(300px + 252px);
-  left: 44.3%;
-  transform: translateX(-50%);
-  width: 61px;
-  height: 63px;
-  cursor: pointer;
-  z-index: 5;  /* Above the rest of the core elements */
-}
-
-/* Social Media Buttons */
-.discord-normal,
-.instagram-normal,
-.youtube-normal,
-.x-normal,
-.facebook-normal,
-.presskit-button,
-.buy-now,
-.googleplay-btn,
-.applestore-btn {
-  position: absolute;
-  top: 8px;
-  z-index: 5;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/* Specific Social Media Button Positions */
-.discord-normal { left: 510px; }
-.instagram-normal { left: 440px; }
-.youtube-normal { left: 370px; }
-.x-normal { left: 300px; }
-.facebook-normal { left: 230px; }
-
-/* PressKit Button */
-.presskit-button {
-  top: calc(39.5px - 60px / 2);
-  left: calc(107px - 160px / 2);
-  width: 160px;
-  height: 51px;
-}
-
-/* Buy Now Button */
-.buy-now {
-  top: calc(36.5px - 29px / 2);
-  left: calc(654.5px - 89px / 2);
-  width: 89px;
-  height: 29px;
-}
-
-/* GooglePlay Button */
-.googleplay-btn {
-  top: calc(39.5px - 60px / 2);
-  left: calc(992px - 160px / 2);
-  width: 160px;
-  height: 51px;
-}
-
-/* AppleStore Button */
-.applestore-btn {
-  top: calc(39.5px - 60px / 2);
-  left: calc(811px - 160px / 2);
-  width: 160px;
-  height: 51px;
-}
-
-/* Play Trailer Button (Pressed) */
-.play-trailer-pressed {
-  position: absolute;
-  top: calc(800px - 58px / 2);
-  left: calc(50% - 504px);
-  width: 58px;
-  height: 58px;
-}
-
