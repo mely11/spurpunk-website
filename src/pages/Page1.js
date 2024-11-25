@@ -33,24 +33,7 @@ import BuyNowButton from '../assets/images/Buy-Now@.png';
 // Importing video
 import GameplayVideo from '../assets/videos/Gameplay_BurialGrounds_Clips_Better.mp4';
 
-// Page2
-import AllText from '../assets/images/All_text@.png'
-import Page2DottedLine from '../assets/images/Page-2-dotted_line@.png'
-import HeroFrame from '../assets/images/Hero_frame@.png'
-import TextBackground from '../assets/images/Page2_Rectangle_1@.png'
-import AllTextBackground from '../assets/images/Page2-Rectangle@.png'
-import Sean from '../assets/images/Hero_Sean@.png'
-import Margarita from '../assets/images/Hero_Margarita@.png'
-import Phil from '../assets/images/Hero_Phil@.png'
-import Mickey from '../assets/images/Hero_Mickey@.png'
-import SeanGearSilhouette from '../assets/images/Page2_Phil_Gear_silhouette@.png'
-import SeanGear from '../assets/images/Page2_Phil_Gear@.png'
-import MargaritaCardsSilhouette from '../assets/images/Page2_Susies_Cards_silhouette@.png'
-import MargaritaCards from '../assets/images/Page2_Susies_Cards@.png'
-import PhilBombSilhouette from '../assets/images/Page2_Phils_Bomb_silhouette@.png'
-import PhilBomb from '../assets/images/Page2_Phils_Bomb@.png'
-import MickeySkullSilhouette from '../assets/images/Page2_Mickeys_Skull_silhouette@.png'
-import MickeySkull from '../assets/images/Page2_Mickeys_Skull@.png'
+
 
 
 const Page1 = () => {
