@@ -1,0 +1,27 @@
+.signup-form {
+    background-image: url('../assets/images/Page4_BG@.png'); /* Set your background image here */
+    background-size: cover;  /* Ensures the image covers the entire background */
+    background-position: center;  /* Centers the background image */
+    padding: 60px 0;  /* Adds padding to the top and bottom */
+    text-align: center;
+    position: relative;
+}
+
+.games-image {
+    margin: 0 auto;  /* Centers the top image */
+}
+
+.form {
+    background-image: url('../assets/images/Page4_Signup_Frame@.png'); /* Background frame image */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;  /* Prevents the background from repeating */
+    background-position: center;  /* Centers the background image */
+    padding: 40px;  /* Padding inside the form */
+    width: 70%;
+    max-width: 800px;  /* Controls the width of the form */
+    max-height: auto; /* Controls the height of the form */ 
+}
+
+.form-control {
+    max-width: 100%;
+}
