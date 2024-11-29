@@ -1,19 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import './Page2.css';
 
 // Page2
-import AllText from '../assets/images/All_text@.png';
-import MYI from '../assets/images/MYI@.png'
-import SeanText from '../assets/images/Sean_text@.png';
-import MargaritaText from '../assets/images/Margarita_text@.png';
-import PhilText from '../assets/images/Phil_text@.png';
-import MickeyText from '../assets/images/Mickey_text@.png';
 import Page2DottedLine from '../assets/images/Page-2-dotted_line@.png';
 import HeroFrame from '../assets/images/Hero_frame@.png';
-import TextBackground from '../assets/images/Page2_Rectangle_1@.png';
-import AllTextBackground from '../assets/images/Page2-Rectangle@.png';
 import Sean from '../assets/images/Hero_Sean@.png';
 import Margarita from '../assets/images/Hero_Margarita@.png';
 import Phil from '../assets/images/Hero_Phil@.png';
@@ -27,10 +20,33 @@ import MargaritaCards from '../assets/images/Page2_Susies_Cards@.png'
 import PhilBomb from '../assets/images/Page2_Phils_Bomb@.png'
 import MickeySkull from '../assets/images/Page2_Mickeys_Skull@.png'
 
+const jumpAnimation = {
+    hidden: { height: '0%' },
+    visible: {
+      height: '52%',
+      transition: {
+        duration: 0.5,
+        ease: 'easeInOut',
+        bounce: 0.3,
+      },
+    },
+    settle: {
+      height: '50%',
+      transition: {
+        duration: 0.2,
+        ease: 'easeOut',
+      },
+    },
+};
+
 const Page2 = () => {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  
   return (
-    <div className="page2-container  py-5">
-      <div className="container g-0">
+    <div className="page2-container page2 py-5" ref={ref}>
+      <div className="container-fluid g-0">
         <p className='myi'>Meet Your Instructors!</p>
 
         {/* Page 2 Dotted Line */}
@@ -41,16 +57,10 @@ const Page2 = () => {
         />
 
         {/* Text Backgrounds */}
-        <div className="row g-0 text-center justify-content-center">
+        <div className="row g-0 text-center justify-content-center align-items-center d-flex">
         
-        {/* <img
-          src={AllTextBackground}
-          alt="All Text Background"
-          className="all-text-background"
-        /> */}
-        
-         {/*Sean*/}   
-        <div className="col-12 col-sm-6 col-md-3 ">
+         {/*Sean  col-sm-6 col-12*/}   
+        <div className="col col-md-3">
             <div className="text-wrapper">
                 <p className='fonts'>Sean</p>
                 <img
@@ -68,15 +78,14 @@ const Page2 = () => {
                     alt="Hero frame 1"
                     className="hero-frame"
                 />
-                {/* <img
-                    src={TextBackground}
-                    alt="Text Background"
-                    className="text-background"
-                /> */}
-                <img 
+        
+                <motion.img 
                     src={Sean} 
                     alt="Hero Sean" 
-                    className="hero-content" 
+                    className="hero-figure" 
+                    // initial="hidden"
+                    // animate={isInView ? ['visible', 'settle'] : 'hidden'}
+                    // variants={jumpAnimation}
                 />
                 <p className='sp-title'>Electric Spurpunk</p>
                 <p className='sp-content'>Creates weapons from any<br/>and all scraps - metal, wood,<br/>even bone.</p>
@@ -84,8 +93,8 @@ const Page2 = () => {
             </div>
         </div>
 
-        {/* Margarita */}
-        <div className="col-12 col-sm-6 col-md-3 ">
+        {/* Margarita  col-sm-6 col-12*/}
+        <div className="col col-md-3">
             <div className="text-wrapper">
             <p className='fonts'>Margarita</p>
             <img
@@ -103,24 +112,23 @@ const Page2 = () => {
                 alt="Hero frame 2"
                 className="hero-frame"
             />
-            {/* <img
-                src={TextBackground}
-                alt="Text Background"
-                className="text-background"
-            /> */}
-            <img 
+            
+            <motion.img 
                 src={Margarita} 
                 alt="Hero Margarita" 
-                className="hero-content" 
+                className="hero-figure" 
+                // initial="hidden"
+                // animate={isInView ? ['visible', 'settle'] : 'hidden'}
+                // variants={jumpAnimation}
             />
             <p className='sp-title'>Elemental Spurpunk</p>
-            <p className='sp-content'>A mage with a talent to<br/>create dangerous spells<br/>from playing cards.</p>
+            <p className='sp-content'>A mage with a talent to create<br/>dangerous spells from<br/>playing cards.</p>
             
             </div> 
         </div>
 
-        {/* Phil */}
-        <div className="col-12 col-sm-6 col-md-3 ">
+        {/* Phil col-sm-6 col-12*/}
+        <div className="col col-md-3">
             <div className="text-wrapper">
             <p className='fonts'>Phil</p>
             <img
@@ -138,15 +146,14 @@ const Page2 = () => {
                 alt="Hero frame 3"
                 className="hero-frame"
             />
-            {/* <img
-                src={TextBackground}
-                alt="Text Background"
-                className="text-background"
-            /> */}
-            <img 
+            
+            <motion.img 
                 src={Phil} 
                 alt="Hero Phil" 
-                className="hero-content" 
+                className="hero-figure" 
+                // initial="hidden"
+                // animate={isInView ? ['visible', 'settle'] : 'hidden'}
+                // variants={jumpAnimation}
             />
             <p className='sp-title'>Ghost Spurpunk</p>
             <p className='sp-content'>An ectoplasmic shopkeeper<br/>who crafts unstable items<br/>and then puts them on sale.</p>
@@ -154,8 +161,8 @@ const Page2 = () => {
             </div>
         </div>
 
-        {/* Mickey */}
-        <div className="col-12 col-sm-6 col-md-3 ">
+        {/* Mickey  col-12 col-sm-6 */}
+        <div className="col col-md-3 ">
             <div className="text-wrapper">
             <p className='fonts'>Mickey</p>
             <img
@@ -173,24 +180,20 @@ const Page2 = () => {
                 alt="Hero frame 2"
                 className="hero-frame"
             />
-            {/* <img
-                src={TextBackground}
-                alt="Text Background"
-                className="text-background"
-            /> */}
-            <img 
+            
+            <motion.img 
                 src={Mickey} 
                 alt="Hero Mickey" 
-                className="hero-content mickey" 
+                className="hero-figure mickey" 
+                // initial="hidden"
+                // animate={isInView ? ['visible', 'settle'] : 'hidden'}
+                // variants={jumpAnimation}
             />
             <p className='sp-title'>Dark Spurpunk</p>
             <p className='sp-content'>A powerful necromancer<br/>who commands an army of<br/>the undead.</p>
             </div>
         </div>
         </div>
-
-        
-
         
       </div>
     </div>
