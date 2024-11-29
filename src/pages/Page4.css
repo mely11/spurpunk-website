@@ -1,0 +1,60 @@
+.signup-form {
+    background-image: url('../assets/images/Page4_BG@.png'); /* Set your background image here */
+    background-size: cover;  /* Ensures the image covers the entire background */
+    background-position: center;  /* Centers the background image */
+    padding: 60px 0;  /* Adds padding to the top and bottom */
+    text-align: center;
+    position: relative;
+}
+
+.games-image {
+    margin: 0 auto;  /* Centers the top image */
+}
+
+.form {
+    background-image: url('../assets/images/Page4_Signup_Frame@.png'); /* Background frame image */
+    background-size: 80% 80%;
+    background-repeat: no-repeat;  /* Prevents the background from repeating */
+    background-position: center;  /* Centers the background image */
+    padding: 60px;  /* Padding inside the form */
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    /* max-width: 80%;  Controls the width of the form
+    max-height: 80%; Controls the height of the form  */
+}
+
+.form-label {
+    width: 20%;
+    margin-bottom: 3px;
+    margin-top: 15px;
+    padding: 5px;  
+}
+.form-control {
+    width: 80%;
+}
+
+.form-img{
+    background-image: url('../assets/images/Page4_Name_Email@.png'); /* Background frame image */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;  /* Prevents the background from repeating */
+    background-position: center;
+    
+}
+
+.transparent-input {
+    background-color: transparent; /* Makes the input background transparent */
+    border: none; /* Removes the default input border */
+    border-bottom: 2px solid #ccc; /* Adds a thin bottom border for visibility */
+    color: #000; /* Ensures the input text is visible */
+    outline: none; /* Removes the focus outline */
+    padding: 5px; /* Optional: Adds some padding for better appearance */
+    font-size: 16px; /* Adjust font size for readability */
+  }
+  
+  .transparent-input:focus {
+    border-bottom: 2px solid black; /* Highlights the bottom border when focused */
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
