@@ -1,25 +1,86 @@
+.container-fluid {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
 .signup-form {
-    background-image: url('../assets/images/Page4_BG@.png'); /* Set your background image here */
-    background-size: cover;  /* Ensures the image covers the entire background */
-    background-position: center;  /* Centers the background image */
-    padding: 60px 0;  /* Adds padding to the top and bottom */
+    /* background-image: url('../assets/images/Page4_BG@.png'); Set your background image here */
+    /* background-size: cover;  Ensures the image covers the entire background */
+    /* background-position: center;  Centers the background image */
+    background-color: #df9542;
+    padding: 20px 0;  /* Adds padding to the top and bottom */
     text-align: center;
     position: relative;
+    height: 80vh;
 }
 
 .games-image {
     margin: 0 auto;  /* Centers the top image */
+    
+}
+
+.testimony-image {
+    width: 100%;
+    height: 100%;
+    max-height: 281px;
+    z-index: 1;
+}
+
+.landmass {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    max-width: 961px;
+    max-height: 838px;
+    left: 18%;
+    z-index: 0;
+    transform: rotate(7deg);
+}
+
+.cactus {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 84px;
+    max-height: 86px;
+    left: 5px;
+    top: 460px;
+    z-index: 0;
+}
+
+.grass {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 53px;
+    max-height: 94px;
+    /* left: 1009; */
+    top: 10px;
+    right: 100px;
+    z-index: 0;
+}
+
+.sign-up-text {
+    position: relative;
+    width: 100%;
+    max-width: 678px;
+    height: auto;
+    top: -3%;
 }
 
 .form {
     background-image: url('../assets/images/Page4_Signup_Frame@.png'); /* Background frame image */
-    background-size: 80% 80%;
+    /* background-size: 100% 100%; */
     background-repeat: no-repeat;  /* Prevents the background from repeating */
     background-position: center;  /* Centers the background image */
-    padding: 60px;  /* Padding inside the form */
+    padding: 20px;  /* Padding inside the form */
     width: 100%;
-    max-width: 1000px;
-    height: auto;
+    max-width: 560px;
+    height: 100%;
+    max-height: 316px;
+    z-index: 2;
     /* max-width: 80%;  Controls the width of the form
     max-height: 80%; Controls the height of the form  */
 }
@@ -36,16 +97,20 @@
 
 .form-img{
     background-image: url('../assets/images/Page4_Name_Email@.png'); /* Background frame image */
-    background-size: 100% 100%;
+    /* background-size: 100% 100%; */
     background-repeat: no-repeat;  /* Prevents the background from repeating */
     background-position: center;
+    width: 100%;
+    max-width: 333px;
+    height: 100%;
+    max-height: 136px;
     
 }
 
 .transparent-input {
     background-color: transparent; /* Makes the input background transparent */
     border: none; /* Removes the default input border */
-    border-bottom: 2px solid #ccc; /* Adds a thin bottom border for visibility */
+    /* border-bottom: 2px solid #ccc; Adds a thin bottom border for visibility */
     color: #000; /* Ensures the input text is visible */
     outline: none; /* Removes the focus outline */
     padding: 5px; /* Optional: Adds some padding for better appearance */
@@ -57,4 +122,112 @@
     background-color: transparent;
     border: none;
     outline: none;
+  }
+
+  .icon {
+    position: absolute;
+    height: 100%;
+    max-height: 99px;
+    width: 100%;
+    max-width:99px;
+    left: 142.5px;
+    top: 10%;
+    z-index: 3;
+  }
+
+  .page4-dotted-line {
+    position: absolute;
+    height: 50%;
+    /* max-height: 427px; */
+    width: 20%;
+    /* max-width: 283px; */
+    left: 160px;
+    top: -5%;
+    z-index: 1;
+  }
+
+  .arrow-head {
+    position: absolute;
+    height: 100%;
+    max-height: 63px;
+    width: 100%;
+    max-width: 64px;
+    left: 292px;
+    top: 30%;
+    z-index: 1;
+    transform: rotate(-15deg);
+  }
+
+  .sean {
+    position: absolute;
+    height: 60%;
+    /* max-height: 351px; */
+    width: auto;
+    /* max-width: 320px; */
+    left: 160px;
+    top: 40%;
+    z-index: 3;
+  }
+
+  .margarita {
+    position: absolute;
+    height:56%;
+    /* max-height: 351px; */
+    width: auto;
+    /* max-width: 320px; */
+    left: 890px;
+    top: 44%;
+    z-index: 3;
+  }
+
+  .phil {
+    position: absolute;
+    height: 60%;
+    /* max-height: 351px; */
+    width: auto;
+    /* max-width: 320px; */
+    left: 804px;
+    top: 18%;
+    z-index: 1;
+  }
+
+  .bottom-bit {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 217px;
+    z-index: 2;
+  }
+
+.appstore {
+    position: absolute; /* Ensure absolute positioning within the parent */
+    left: 417px;
+    /* top: 1032px; */
+    bottom: 2%;
+    z-index: 4;        /* Ensure it appears above lower layers */
+    width: 100%;       /* Maintain aspect ratio */
+    height: 100%; 
+    max-width: 221px;
+    max-height: 72px;
+}
+
+.playstore {
+    position: absolute; /* Ensure absolute positioning within the parent */
+    bottom: 2%;         /* Align it to the bottom */
+    left: 644.5px;         /* Align it to the right */
+    z-index: 3;        /* Ensure it appears above lower layers */
+    width: 100%;       /* Maintain aspect ratio */
+    height: 100%;  
+    max-width: 221px;
+    max-height: 72px;
+}
+
+  .itzamna {
+    position: absolute; /* Ensure absolute positioning within the parent */
+    bottom: 0;         /* Align it to the bottom */
+    right: 0;          /* Align it to the right */
+    z-index: 3;        /* Ensure it appears above lower layers */
+    width: auto;       /* Maintain aspect ratio */
+    height: auto;      /* Maintain aspect ratio */
+    max-height: 200px;
   }
