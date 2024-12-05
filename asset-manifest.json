@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/spurpunk-website/static/css/main.733b21a2.css",
-    "main.js": "/spurpunk-website/static/js/main.09f86dd2.js",
+    "main.css": "/spurpunk-website/static/css/main.a1ae36cb.css",
+    "main.js": "/spurpunk-website/static/js/main.188b9dcc.js",
     "static/js/453.a385e91d.chunk.js": "/spurpunk-website/static/js/453.a385e91d.chunk.js",
     "static/media/Gameplay_BurialGrounds_Clips_Better.mp4": "/spurpunk-website/static/media/Gameplay_BurialGrounds_Clips_Better.68d1801557ec1b2a7216.mp4",
     "static/media/Page4_Landmass_COPY@.png": "/spurpunk-website/static/media/Page4_Landmass_COPY@.b1cf989c82109f8dfbc0.png",
@@ -39,12 +39,12 @@
     "static/media/Arrow_Down@.png": "/spurpunk-website/static/media/Arrow_Down@.c8ba24015a1d78b780ba.png",
     "static/media/Are-You-a-Spurpunk@.png": "/spurpunk-website/static/media/Are-You-a-Spurpunk@.bab1275e421a6f76618f.png",
     "index.html": "/spurpunk-website/index.html",
-    "main.733b21a2.css.map": "/spurpunk-website/static/css/main.733b21a2.css.map",
-    "main.09f86dd2.js.map": "/spurpunk-website/static/js/main.09f86dd2.js.map",
+    "main.a1ae36cb.css.map": "/spurpunk-website/static/css/main.a1ae36cb.css.map",
+    "main.188b9dcc.js.map": "/spurpunk-website/static/js/main.188b9dcc.js.map",
     "453.a385e91d.chunk.js.map": "/spurpunk-website/static/js/453.a385e91d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.733b21a2.css",
-    "static/js/main.09f86dd2.js"
+    "static/css/main.a1ae36cb.css",
+    "static/js/main.188b9dcc.js"
   ]
 }
