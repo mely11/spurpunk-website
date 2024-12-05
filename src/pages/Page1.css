@@ -202,7 +202,7 @@
   left: calc(50% - 1000px / 2);
   width: 970px;
   height: 380px;
-  z-index: 4;
+  z-index: 3;
 }
 
 .arrow-down {
