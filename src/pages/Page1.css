@@ -62,7 +62,6 @@
 .background-video {
   position: absolute;
   top: 70px;
-  /* Starts just below the black top bar */
   left: 0;
   width: 100%;
   height: 100%;
@@ -73,7 +72,7 @@
 /* Background Color (Above Video, Below Elements) */
 .background-color {
   position: absolute;
-  top: calc(50vh + 80px);
+  top: 590px;
   left: 0;
   width: 100%;
   height: 70vh;
@@ -99,14 +98,14 @@
 
 /* Specific Elements Styling */
 .spurpunk-title {
-  top: calc(112px);
+  top: 112px;
   left: calc(50% - 536px / 2);
   width: 536px;
   height: 175px;
 }
 
 .skeleton-frame {
-  top: calc(380px);
+  top: 410px;
   left: 41%;
   transform: translateX(-50%);
   width: 280px;
@@ -116,14 +115,14 @@
 /* Trailer Wrapper */
 .trailer-wrapper {
   position: relative;
-  width: fit-content; /* Container only takes as much space as needed */
-  margin: 0 auto; /* Center horizontally */
+  width: fit-content;
+  margin: 0 auto;
 }
 
 /* Skeleton Frame (Blue) */
 .skeleton-frame {
-  position: absolute; /* Positioned relative to the trailer-wrapper */
-  top: calc(355px);
+  position: absolute;
+  top: 510px;
   left: -120px;
   transform: translateY(-50%);
   width: auto;
@@ -134,10 +133,10 @@
 
 /* Trailer Ribbon */
 .trailer-ribbon {
-  position: absolute; /* Position inside the trailer-wrapper */
-  top: calc(560px);
-  left: -140px; /* Keep consistent relative to the wrapper */
-  transform: translateY(-50%); /* Center vertically within the wrapper */
+  position: absolute;
+  top: 690px;
+  left: -140px;
+  transform: translateY(-50%);
   width: auto;
   max-width: 70vw;
   height: auto;
@@ -146,16 +145,16 @@
 
 /* Play Trailer Button */
 .play-trailer-normal {
-  position: absolute; /* Positioned absolutely in relation to the wrapper */
-  top: calc(625px);
-  left: -62.5px; /* Ensure it aligns with the trailer ribbon */
+  position: absolute;
+  top: 755px;
+  left: -62.5px;
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 6;
 }
 
 .are-you-spurpunk {
-  top: calc(725px);
+  top: 855px;
   left: 28%;
   transform: translateX(-50%);
   font-size: 2.5rem;
@@ -164,7 +163,7 @@
 }
 
 .map-cactus2 {
-  top: calc(380px);
+  top: 480px;
   left: 40px;
   width: 159px;
   height: 160px;
@@ -173,7 +172,7 @@
 
 .compass-icon {
   position: absolute;
-  top: calc(50vh + 80px);
+  top: 590px;
   left: 210px;
   width: 200px;
   height: 200px;
@@ -181,35 +180,35 @@
 }
 
 .map-grass-icon {
-  top: calc(751px);
-  left: 200px;
+  top: 850px;
+  left: 100px;
   width: 53px;
   height: 94px;
 }
 
 .map-grass-icon-duplicate {
-  top: calc(580px);
-  left: 900px;
+  top: 610px;
+  left: 830px;
   width: 53px;
   height: 94px;
 }
 
 .map-cactus-icon {
-  top: calc(410px);
+  top: 500px;
   left: 1100px;
   width: 153px;
   height: 136px;
 }
 
 .page1-dotted-line {
-  top: calc(489px);
+  top: 590px;
   left: calc(50% - 1000px / 2);
   width: 882px;
   height: 380px;
 }
 
 .arrow-down {
-  top: calc(698px);
+  top: 728px;
   left: calc(50% + (1009px - 1220px / 2));
   width: 92px;
   height: 88px;
@@ -217,10 +216,9 @@
 
 /* Page 1 Landmass Layer */
 .page1-landmass {
-  top: calc(50vh + 80px);
+  top: 590px;
   left: 0;
   width: 100%;
   height: auto;
   z-index: 3;
-  /* Below core elements */
 }
