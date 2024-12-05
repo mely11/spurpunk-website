@@ -232,7 +232,7 @@ const Page1 = () => {
       </div>
 
       {/* Landmass Section for the Background */}
-      <div className="container d-flex justify-content-center position-relative landmass-container">
+      <div className="landmass-container">
         <motion.img
           src={Page1Landmass}
           alt="Page 1 Landmass"
@@ -244,7 +244,7 @@ const Page1 = () => {
       </div>
 
       {/* Map Cactus2 Icon */}
-      <div className="container d-flex justify-content-center position-relative map-cactus2-container">
+      <div className="map-cactus2-container">
         <motion.img
           src={MapCactus2Icon}
           alt="Map Cactus 2"
@@ -256,7 +256,7 @@ const Page1 = () => {
       </div>
 
       {/* Compass Icon */}
-      <div className="container d-flex justify-content-center position-relative compass-container">
+      <div className="compass-container">
         <motion.img
           src={CompassIcon}
           alt="Compass Icon"
@@ -268,11 +268,11 @@ const Page1 = () => {
       </div>
 
       {/* Map Grass Icon */}
-      <div className="container d-flex justify-content-center position-relative grass-container">
+      <div className="grass-container">
         <motion.img
           src={MapGrassIcon}
           alt="Map Grass Icon"
-          className="map-grass-icon mx-2"
+          className="map-grass-icon"
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.65, duration: 0.25, ease: 'easeOut' }}
@@ -280,7 +280,7 @@ const Page1 = () => {
         <motion.img
           src={MapGrassIcon}
           alt="Map Grass Icon Duplicate"
-          className="map-grass-icon-duplicate mx-2"
+          className="map-grass-icon-duplicate"
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.65, duration: 0.25, ease: 'easeOut' }}
@@ -288,7 +288,7 @@ const Page1 = () => {
       </div>
 
       {/* Map Cactus Icon */}
-      <div className="container d-flex justify-content-center position-relative cactus-container">
+      <div className="cactus-container">
         <motion.img
           src={MapCactusIcon}
           alt="Map Cactus Icon"
@@ -300,7 +300,7 @@ const Page1 = () => {
       </div>
 
       {/* Page 1 Dotted Line */}
-      <div className="container d-flex justify-content-center position-relative dotted-line-container">
+      <div className="dotted-line-container">
         <motion.img
           src={Page1DottedLine}
           alt="Page 1 Dotted Line"
@@ -312,7 +312,7 @@ const Page1 = () => {
       </div>
 
       {/* Arrow Down */}
-      <div className="container d-flex justify-content-center position-relative arrow-container">
+      <div className="arrow-container">
         <motion.img
           src={ArrowDown}
           alt="Arrow Down"
