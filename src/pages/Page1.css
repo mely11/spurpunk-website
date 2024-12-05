@@ -217,8 +217,8 @@
 /* Page 1 Landmass Layer */
 .page1-landmass {
   top: 590px;
-  left: 0;
-  width: 100%;
-  height: auto;
+  left: calc(29%);
+  width: 50%;
+  height: 370px;
   z-index: 3;
 }
