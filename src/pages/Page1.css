@@ -198,10 +198,10 @@
 
 .page1-dotted-line {
   position: absolute;
-  top: 590px;
-  left: calc(50% - 1000px / 2);
-  width: 970px;
-  height: 380px;
+  top: 585px;
+  left: calc(50% - 1065px / 2);
+  width: 1000px;
+  height: 370px;
   z-index: 3;
 }
 
