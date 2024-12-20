@@ -185,38 +185,44 @@ const Page1 = () => {
 
       {/* Trailer Wrapper Section */}
       <div className="container position-relative trailer-wrapper">
-        {/* Skeleton Frame (Blue) */}
-        <motion.img
-          src={SkeletonFrame}
-          alt="Skeleton Frame"
-          className="skeleton-frame"
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.15, duration: 0.25, ease: 'easeOut' }}
-        />
-
-        {/* Trailer Ribbon */}
-        <a href="https://youtu.be/GEHQamurmBI?si=I8-euk5_BwD9Zi6m" target="_blank" rel="noopener noreferrer">
+        <div className="d-flex justify-content-center">
+          {/* Skeleton Frame (Blue) */}
           <motion.img
-            src={TrailerRibbon}
-            alt="Trailer Ribbon"
-            className="trailer-ribbon"
+            src={SkeletonFrame}
+            alt="Skeleton Frame"
+            className="skeleton-frame"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.25, ease: 'easeOut' }}
+            transition={{ delay: 0.15, duration: 0.25, ease: 'easeOut' }}
           />
-        </a>
+        </div>
 
-        {/* Play Trailer Button */}
-        <motion.img
-          src={pressedStates.playTrailer ? PlayTrailerPressed : PlayTrailerNormal}
-          alt="Play Trailer"
-          className="play-trailer-normal"
-          initial={{ y: 25, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.25, ease: 'easeOut' }}
-          onClick={() => handlePress('playTrailer', 200)}
-        />
+        <div className="d-flex justify-content-center">
+          {/* Trailer Ribbon */}
+          <a href="https://youtu.be/GEHQamurmBI?si=I8-euk5_BwD9Zi6m" target="_blank" rel="noopener noreferrer">
+            <motion.img
+              src={TrailerRibbon}
+              alt="Trailer Ribbon"
+              className="trailer-ribbon"
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.25, ease: 'easeOut' }}
+            />
+          </a>
+        </div>
+
+        <div className="d-flex justify-content-center">
+          {/* Play Trailer Button */}
+          <motion.img
+            src={pressedStates.playTrailer ? PlayTrailerPressed : PlayTrailerNormal}
+            alt="Play Trailer"
+            className="play-trailer-normal"
+            initial={{ y: 25, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.25, ease: 'easeOut' }}
+            onClick={() => handlePress('playTrailer', 200)}
+          />
+        </div>
       </div>
 
       {/* Are You a Spurpunk (Pink) */}
@@ -268,11 +274,11 @@ const Page1 = () => {
       </div>
 
       {/* Map Grass Icon */}
-      <div className="grass-container">
+      <div className="grass-container d-flex justify-content-center">
         <motion.img
           src={MapGrassIcon}
           alt="Map Grass Icon"
-          className="map-grass-icon"
+          className="map-grass-icon mx-2"
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.65, duration: 0.25, ease: 'easeOut' }}
@@ -280,7 +286,7 @@ const Page1 = () => {
         <motion.img
           src={MapGrassIcon}
           alt="Map Grass Icon Duplicate"
-          className="map-grass-icon-duplicate"
+          className="map-grass-icon-duplicate mx-2"
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.65, duration: 0.25, ease: 'easeOut' }}
@@ -312,7 +318,7 @@ const Page1 = () => {
       </div>
 
       {/* Arrow Down */}
-      <div className="arrow-container">
+      <div className="arrow-container d-flex justify-content-center">
         <motion.img
           src={ArrowDown}
           alt="Arrow Down"
